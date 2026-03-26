@@ -9,8 +9,8 @@
 <meta property="og:title" content="CHROME — Upscale Men's Barbershop & Grooming, Viman Nagar Pune">
 <meta property="og:description" content="Luxury Spa Salon in Pune. Five-star beauty experience — hair, skin, massage, spa. Premium pampering for every occasion.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://invictus-ai.in/assets/chrome-og.jpg">
-<link rel="canonical" href="https://invictus-ai.in/salon/chrome">
+<meta property="og:image" content="https://invictus-salon-demos.vercel.app/05-luxury-spa/">
+<link rel="canonical" href="https://invictus-salon-demos.vercel.app/05-luxury-spa/">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -22,7 +22,7 @@
     "addressRegion": "Maharashtra",
     "addressCountry": "IN"
   },
-  "url": "https://invictus-ai.in",
+  "url": "https://invictus-salon-demos.vercel.app/05-luxury-spa/",
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "4.5",
@@ -69,7 +69,7 @@
       "name": "Is CHROME Barbershop appointment-only in Viman Nagar?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Both walk-ins and appointments are welcome at CHROME. We recommend booking for weekends and popular time slots. You can book via WhatsApp or phone call."
+        "text": "By appointment preferred; walk-ins subject to availability at CHROME. We recommend booking for weekends and popular time slots. You can book via WhatsApp or phone call."
       }
     },
     {
@@ -158,6 +158,14 @@ footer{background:var(--mid);border-top:1px solid rgba(192,192,192,0.1);padding:
 .f-links a:hover{color:var(--white);}
 footer p{color:var(--accent);font-size:0.82rem;line-height:1.7;}
 @media(max-width:768px){.nav-links{display:none;}.bk-grid{grid-template-columns:1fr;gap:2rem;}.hero::after{display:none;}}
+
+  @media(max-width:768px){
+    .nav-links, .nav-cta { display:none!important; }
+    #mob-links-05luxuryspa { display:none; }
+    #mob-links-05luxuryspa.show { display:flex!important; flex-direction:column; position:absolute; top:70px; left:0; right:0; background:white; padding:1rem; box-shadow:0 4px 12px rgba(0,0,0,0.15); z-index:50; }
+    #mob-links-05luxuryspa.show a { margin:0!important; padding:10px 0; border-bottom:1px solid #eee; color:#333!important; display:block; text-decoration:none; }
+    #mob-btn-05luxuryspa { display:block!important; }
+  }
 </style>
 
 </head>
@@ -168,6 +176,11 @@ footer p{color:var(--accent);font-size:0.82rem;line-height:1.7;}
     <a href="#services">Services</a><a href="#membership">Membership</a><a href="#booking">Book</a>
     <a href="#booking" class="nav-cta">Reserve</a>
   </div>
+<button id="mob-btn-05luxuryspa" style="display:none;padding:8px;cursor:pointer;background:none;border:none;" onclick="document.getElementById('mob-links-05luxuryspa').classList.toggle('show')" aria-label="Menu"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+<div id="mob-links-05luxuryspa"><a href="#services">Services</a>
+<a href="#membership">Membership</a>
+<a href="#booking">Book</a>
+<a href="#booking">Reserve</a></div>
 </nav>
 <section class="hero">
   <div class="hero-inner">
@@ -305,7 +318,7 @@ footer p{color:var(--accent);font-size:0.82rem;line-height:1.7;}
         Is CHROME Barbershop appointment-only in Viman Nagar?
         <span style="font-size: 1.2rem; color: #888888; margin-left: 12px; flex-shrink:0;">+</span>
       </summary>
-      <div style="padding: 0 20px 18px; font-size: 0.9rem; color: #4b5563; line-height: 1.7;">Both walk-ins and appointments are welcome at CHROME. We recommend booking for weekends and popular time slots. You can book via WhatsApp or phone call.</div>
+      <div style="padding: 0 20px 18px; font-size: 0.9rem; color: #4b5563; line-height: 1.7;">By appointment preferred; walk-ins subject to availability at CHROME. We recommend booking for weekends and popular time slots. You can book via WhatsApp or phone call.</div>
     </details>
     <details style="background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 10px; overflow: hidden;">
       <summary style="padding: 18px 20px; font-weight: 600; font-size: 0.95rem; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; color: #1f2937;">

@@ -9,8 +9,8 @@
 <meta property="og:title" content="Glow & Co — Modern Unisex Salon, Baner Pune">
 <meta property="og:description" content="Modern Minimal Salon in Pune. Clean cuts, precision styling, modern aesthetics. Less is more. Book a session with our expert stylists.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://invictus-ai.in/assets/glowco-og.jpg">
-<link rel="canonical" href="https://invictus-ai.in/salon/glowco">
+<meta property="og:image" content="https://invictus-salon-demos.vercel.app/02-modern-minimal/">
+<link rel="canonical" href="https://invictus-salon-demos.vercel.app/02-modern-minimal/">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -22,7 +22,7 @@
     "addressRegion": "Maharashtra",
     "addressCountry": "IN"
   },
-  "url": "https://invictus-ai.in",
+  "url": "https://invictus-salon-demos.vercel.app/02-modern-minimal/",
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "4.4",
@@ -148,6 +148,14 @@ footer { background:var(--mid);border-top:1px solid rgba(0,188,212,0.15);padding
 .f-links a:hover { color:var(--teal); }
 footer p { color:var(--text);font-size:0.85rem;line-height:1.7; }
 @media(max-width:768px){.nav-links{display:none;}.bk-grid{grid-template-columns:1fr;gap:2rem;}.stats{gap:2rem;}}
+
+  @media(max-width:768px){
+    .nav-links, .nav-cta { display:none!important; }
+    #mob-links-02modernminimal { display:none; }
+    #mob-links-02modernminimal.show { display:flex!important; flex-direction:column; position:absolute; top:70px; left:0; right:0; background:white; padding:1rem; box-shadow:0 4px 12px rgba(0,0,0,0.15); z-index:50; }
+    #mob-links-02modernminimal.show a { margin:0!important; padding:10px 0; border-bottom:1px solid #eee; color:#333!important; display:block; text-decoration:none; }
+    #mob-btn-02modernminimal { display:block!important; }
+  }
 </style>
 
 </head>
@@ -158,6 +166,11 @@ footer p { color:var(--text);font-size:0.85rem;line-height:1.7; }
     <a href="#services">Services</a><a href="#about">About</a><a href="#reviews">Reviews</a>
     <a href="#booking" class="nav-cta">Book Now</a>
   </div>
+<button id="mob-btn-02modernminimal" style="display:none;padding:8px;cursor:pointer;background:none;border:none;" onclick="document.getElementById('mob-links-02modernminimal').classList.toggle('show')" aria-label="Menu"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+<div id="mob-links-02modernminimal"><a href="#services">Services</a>
+<a href="#about">About</a>
+<a href="#reviews">Reviews</a>
+<a href="#booking">Book Now</a></div>
 </nav>
 <section class="hero">
   <div>
