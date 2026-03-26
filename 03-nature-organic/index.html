@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Glow & Co — Modern Unisex Salon, Baner Pune</title>
+<style>
+:root { --teal: #00BCD4; --mint: #80CBC4; --dark: #0D1B1E; --mid: #1A2F33; --text: #B2D8DC; --white: #FFFFFF; }
+* { margin:0;padding:0;box-sizing:border-box; }
+body { font-family: 'Arial', sans-serif; background: var(--dark); color: var(--text); overflow-x: hidden; }
+nav { position:fixed;top:0;width:100%;z-index:100;background:rgba(13,27,30,0.95);backdrop-filter:blur(12px);border-bottom:1px solid rgba(0,188,212,0.2);padding:0 5%;display:flex;justify-content:space-between;align-items:center;height:70px; }
+.logo { font-size:1.5rem;font-weight:700;color:var(--teal);letter-spacing:2px; }
+.logo span { color:var(--white); }
+.nav-links a { color:var(--text);text-decoration:none;margin-left:2rem;font-size:0.85rem;letter-spacing:1px;transition:color 0.3s; }
+.nav-links a:hover { color:var(--teal); }
+.nav-cta { background:var(--teal);color:var(--dark)!important;padding:8px 20px;border-radius:20px;font-weight:700; }
+.hero { min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:0 5%;padding-top:70px;background:radial-gradient(ellipse at 50% 40%,rgba(0,188,212,0.12) 0%,transparent 60%),var(--dark); }
+.badge { display:inline-block;background:rgba(0,188,212,0.15);border:1px solid rgba(0,188,212,0.4);color:var(--teal);padding:6px 20px;border-radius:20px;font-size:0.8rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:1.5rem; }
+.hero h1 { font-size:clamp(2.5rem,6vw,4.5rem);font-weight:800;color:var(--white);line-height:1.1;margin-bottom:1rem; }
+.hero h1 span { color:var(--teal); }
+.hero p { font-size:1.05rem;color:var(--text);max-width:580px;margin:0 auto 2.5rem;line-height:1.8; }
+.btns { display:flex;gap:1rem;justify-content:center;flex-wrap:wrap; }
+.btn-p { background:var(--teal);color:var(--dark);padding:14px 35px;border-radius:8px;text-decoration:none;font-weight:700;font-size:0.95rem;transition:all 0.3s; }
+.btn-p:hover { background:var(--mint);transform:translateY(-2px); }
+.btn-s { border:2px solid var(--teal);color:var(--teal);padding:13px 35px;border-radius:8px;text-decoration:none;font-size:0.95rem;transition:all 0.3s; }
+.btn-s:hover { background:rgba(0,188,212,0.1);transform:translateY(-2px); }
+.stats { display:flex;gap:3rem;justify-content:center;margin-top:3rem;flex-wrap:wrap; }
+.stat .n { font-size:2rem;color:var(--teal);font-weight:800; }
+.stat .l { font-size:0.75rem;color:var(--text);letter-spacing:1.5px;text-transform:uppercase; }
+section { padding:80px 5%; }
+.s-label { display:inline-block;color:var(--teal);font-size:0.75rem;letter-spacing:3px;text-transform:uppercase;margin-bottom:0.75rem; }
+.s-title { font-size:clamp(1.8rem,3.5vw,2.6rem);color:var(--white);margin-bottom:1rem;font-weight:700; }
+.s-title span { color:var(--teal); }
+.s-sub { color:var(--text);max-width:580px;line-height:1.8;font-size:0.95rem; }
+.tc { text-align:center; }
+.tc .s-sub { margin:0 auto; }
+.services-bg { background:var(--mid); }
+.grid3 { display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:1.5rem;margin-top:3rem; }
+.card { background:rgba(13,27,30,0.8);border:1px solid rgba(0,188,212,0.15);border-radius:12px;padding:2rem;transition:all 0.3s; }
+.card:hover { border-color:rgba(0,188,212,0.5);transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,188,212,0.15); }
+.c-icon { font-size:2.2rem;margin-bottom:1rem; }
+.card h3 { color:var(--white);font-size:1rem;margin-bottom:0.75rem;font-weight:700; }
+.card p { color:var(--text);font-size:0.88rem;line-height:1.7; }
+.c-price { margin-top:0.75rem;color:var(--teal);font-size:0.85rem;font-weight:700; }
+.offer-section { background:linear-gradient(135deg,rgba(0,188,212,0.1),rgba(128,203,196,0.05));border-top:1px solid rgba(0,188,212,0.2);border-bottom:1px solid rgba(0,188,212,0.2);text-align:center; }
+.offer-tag { display:inline-block;background:var(--teal);color:var(--dark);padding:6px 20px;border-radius:20px;font-size:0.8rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:1.5rem;font-weight:700; }
+.offer-section h2 { font-size:clamp(1.8rem,4vw,3rem);color:var(--white);margin-bottom:1rem;max-width:700px;margin-left:auto;margin-right:auto; }
+.offer-section p { color:var(--text);line-height:1.8;max-width:600px;margin:0 auto 2rem; }
+.booking-section { background:var(--dark); }
+.bk-grid { display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;max-width:980px;margin:0 auto; }
+.bk-info h2 { font-size:2rem;color:var(--white);font-weight:700;margin-bottom:1.5rem; }
+.bk-info h2 span { color:var(--teal); }
+.info-row { display:flex;gap:1rem;margin-bottom:1.25rem; }
+.i-icon { color:var(--teal);font-size:1.1rem;min-width:22px;margin-top:2px; }
+.info-row div { color:var(--text);font-size:0.9rem;line-height:1.6; }
+.info-row strong { color:var(--white); }
+.bk-form { background:var(--mid);border-radius:12px;padding:2rem;border:1px solid rgba(0,188,212,0.2); }
+.bk-form h3 { color:var(--white);font-weight:700;margin-bottom:1.5rem; }
+.fg { margin-bottom:1.25rem; }
+.fg label { display:block;color:var(--text);font-size:0.78rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:0.5rem; }
+.fg input,.fg select { width:100%;background:rgba(13,27,30,0.9);border:1px solid rgba(0,188,212,0.3);border-radius:8px;padding:10px 14px;color:var(--white);font-size:0.9rem;outline:none;transition:border 0.3s; }
+.fg input:focus,.fg select:focus { border-color:var(--teal); }
+.fg select option { background:var(--dark); }
+footer { background:var(--mid);border-top:1px solid rgba(0,188,212,0.15);padding:40px 5%;text-align:center; }
+.f-logo { font-size:1.3rem;font-weight:800;color:var(--teal);letter-spacing:2px;margin-bottom:0.5rem; }
+.f-logo span { color:var(--white); }
+.f-links { display:flex;justify-content:center;gap:2rem;margin:1rem 0;flex-wrap:wrap; }
+.f-links a { color:var(--text);text-decoration:none;font-size:0.85rem;transition:color 0.3s; }
+.f-links a:hover { color:var(--teal); }
+footer p { color:var(--text);font-size:0.85rem;line-height:1.7; }
+@media(max-width:768px){.nav-links{display:none;}.bk-grid{grid-template-columns:1fr;gap:2rem;}.stats{gap:2rem;}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="logo">Glow<span>&Co</span></div>
+  <div class="nav-links">
+    <a href="#services">Services</a><a href="#about">About</a><a href="#reviews">Reviews</a>
+    <a href="#booking" class="nav-cta">Book Now</a>
+  </div>
+</nav>
+<section class="hero">
+  <div>
+    <div class="badge">✦ Modern Unisex Salon ✦</div>
+    <h1>Look Sharp.<br><span>Feel Fresh.</span><br>Every Time.</h1>
+    <p>Baner's go-to salon for cuts, colour, and treatments that actually work. No fluff — just results from stylists who know their craft.</p>
+    <div class="btns">
+      <a href="#booking" class="btn-p">Book Appointment</a>
+      <a href="#services" class="btn-s">See Services & Prices</a>
+    </div>
+    <div class="stats">
+      <div class="stat"><div class="n">6,200+</div><div class="l">Clients Served</div></div>
+      <div class="stat"><div class="n">11 Yrs</div><div class="l">In Pune</div></div>
+      <div class="stat"><div class="n">4.8★</div><div class="l">Google Rating</div></div>
+      <div class="stat"><div class="n">Unisex</div><div class="l">All Welcome</div></div>
+    </div>
+  </div>
+</section>
+<section class="services-bg" id="services">
+  <div class="tc">
+    <span class="s-label">Services</span>
+    <h2 class="s-title">Everything You <span>Need</span></h2>
+    <p class="s-sub">Cuts, colour, and treatments for women, men, and everyone in between.</p>
+  </div>
+  <div class="grid3">
+    <div class="card"><div class="c-icon">✂️</div><h3>Hair Cuts</h3><p>Women's cut & style, men's barbering, kids cuts. Clean, precise, tailored to you. Includes blow-dry.</p><div class="c-price">From ₹400</div></div>
+    <div class="card"><div class="c-icon">🎨</div><h3>Hair Colour</h3><p>Global colour, highlights, babylights, balayage. L'Oreal and Schwarzkopf products only. Patch test included.</p><div class="c-price">From ₹1,800</div></div>
+    <div class="card"><div class="c-icon">💎</div><h3>Keratin Smoothening</h3><p>Frizz-free, salon-straight hair for 5–6 months. Multiple brands available. Free aftercare kit.</p><div class="c-price">From ₹3,500</div></div>
+    <div class="card"><div class="c-icon">🪒</div><h3>Men's Grooming</h3><p>Fade cuts, beard trims, shaves, and hair spa. Dedicated men's section for privacy and comfort.</p><div class="c-price">From ₹300</div></div>
+    <div class="card"><div class="c-icon">💆</div><h3>Head Massage & Spa</h3><p>Deep conditioning and scalp treatment. Includes steam and nourishing mask. Great for city-stress hair.</p><div class="c-price">From ₹900</div></div>
+    <div class="card"><div class="c-icon">🌟</div><h3>Party & Occasion Styling</h3><p>Party blowouts, updos, saree draping, and light makeup for events. Walk-ins welcome on weekdays.</p><div class="c-price">From ₹800</div></div>
+  </div>
+</section>
+<section class="offer-section">
+  <div>
+    <div class="offer-tag">New Client Offer</div>
+    <h2>First Visit? Get <span style="color:var(--teal)">₹200 Off</span> Any Service</h2>
+    <p>First time at Glow & Co? We're giving you ₹200 off any service above ₹600. No catch, no fine print. Just show this page when you arrive.</p>
+    <a href="#booking" class="btn-p">Grab Offer & Book</a>
+  </div>
+</section>
+<section class="booking-section" id="booking">
+  <div class="bk-grid">
+    <div class="bk-info">
+      <h2>Visit <span>Glow & Co</span></h2>
+      <div class="info-row"><div class="i-icon">📍</div><div><strong>Address</strong><br>Shop 7, Panchshil Towers, Baner Road<br>Pune, Maharashtra 411045</div></div>
+      <div class="info-row"><div class="i-icon">📞</div><div><strong>Call / WhatsApp</strong><br>+91 98765 12345</div></div>
+      <div class="info-row"><div class="i-icon">🕐</div><div><strong>Hours</strong><br>Mon–Sat: 9:30 AM – 9:00 PM<br>Sunday: 10:00 AM – 7:00 PM</div></div>
+      <div class="info-row"><div class="i-icon">🅿️</div><div><strong>Parking</strong><br>Free parking in front. Easy access from Baner-Aundh Road.</div></div>
+    </div>
+    <div class="bk-form">
+      <h3>Book Your Slot</h3>
+      <div class="fg"><label>Name</label><input type="text" placeholder="Your full name"></div>
+      <div class="fg"><label>Phone</label><input type="tel" placeholder="+91 9XXXXXXXXX"></div>
+      <div class="fg"><label>Service</label>
+        <select>
+          <option>Hair Cut</option><option>Hair Colour</option><option>Keratin</option>
+          <option>Men's Grooming</option><option>Head Spa</option><option>Party Styling</option>
+        </select>
+      </div>
+      <div class="fg"><label>Preferred Day</label>
+        <select><option>Today</option><option>Tomorrow</option><option>This Weekend</option><option>Next Week</option></select>
+      </div>
+      <a href="https://wa.me/919876512345?text=Hi!%20I%20want%20to%20book%20at%20Glow%20%26%20Co" class="btn-p" style="display:block;text-align:center;margin-top:0.5rem;text-decoration:none;">
+        📱 Confirm on WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="f-logo">Glow<span>&Co</span></div>
+  <div class="f-links"><a href="#services">Services</a><a href="#about">About</a><a href="#booking">Book</a></div>
+  <p>Shop 7, Panchshil Towers, Baner Road, Pune 411045 | +91 98765 12345<br>
+  © 2024 Glow & Co. All rights reserved. | Powered by <strong>Invictus AI</strong></p>
+</footer>
+</body>
+</html>
