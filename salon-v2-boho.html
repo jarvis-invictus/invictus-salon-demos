@@ -1,1096 +1,1626 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sage & Botanicals Hair Studio — Organic Beauty, Aundh Pune</title>
-    <meta name="description" content="Organic, boho-inspired hair salon in Aundh, Pune. Plant-based treatments, natural styling, sustainable beauty. Book your natural transformation today.">
-    <meta name="keywords" content="organic hair salon pune, boho salon, natural hair treatments, plant-based hair color, aundh pune salon, sustainable beauty">
-    
-    <!-- Open Graph -->
-    <meta property="og:title" content="Sage & Botanicals — Organic Hair Studio, Aundh Pune">
-    <meta property="og:description" content="Boho-inspired salon with plant-based treatments, natural styling, and sustainable practices. Sage & Botanicals celebrates your natural beauty.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://invictus-salon-demos.vercel.app/salon-v2-boho.html">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1595328055557-f7ff46714a0e?w=1200&h=630&fit=crop">
-    
-    <!-- Canonical -->
-    <link rel="canonical" href="https://invictus-salon-demos.vercel.app/salon-v2-boho.html">
-    
-    <!-- Favicon -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>">
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-    
-    <!-- JSON-LD Schema -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BeautySalon",
-        "name": "Sage & Botanicals Hair Studio",
-        "description": "Organic, boho-inspired hair salon with plant-based treatments and sustainable practices",
-        "url": "https://invictus-salon-demos.vercel.app/salon-v2-boho.html",
-        "telephone": "+91-9876543210",
-        "email": "hello@sageandbot anicals.in",
-        "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Aundh",
-            "addressRegion": "Pune",
-            "postalCode": "411007",
-            "addressCountry": "IN"
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sage &amp; Botanicals Hair Studio | Natural Beauty, Rooted in Wellness</title>
+<meta name="description" content="Sage & Botanicals Hair Studio — a boho-inspired salon in Bandra, Mumbai offering plant-based hair care, henna coloring, Ayurvedic treatments, and sustainable beauty rituals.">
+<meta name="keywords" content="natural hair salon, boho salon, botanical hair care, henna coloring, Ayurvedic hair treatment, Mumbai salon, organic salon">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Sage & Botanicals Hair Studio | Natural Beauty, Rooted in Wellness">
+<meta property="og:description" content="A boho-inspired salon offering plant-based hair care, henna coloring, Ayurvedic treatments, and sustainable beauty rituals in Bandra, Mumbai.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1200&q=80">
+<meta property="og:url" content="https://invictus-salon-demos.vercel.app/salon-v2-boho.html">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        sage: {
+          50: '#f6f7f4',
+          100: '#e8ebe2',
+          200: '#d4dac7',
+          300: '#b4bfa2',
+          400: '#94a67d',
+          500: '#7a8f63',
+          600: '#5f724c',
+          700: '#4b5a3d',
+          800: '#3e4a34',
+          900: '#353f2e',
+          950: '#1a2116',
         },
-        "image": "https://images.unsplash.com/photo-1595328055557-f7ff46714a0e?w=1200&h=630&fit=crop",
-        "sameAs": [
-            "https://instagram.com",
-            "https://facebook.com"
-        ],
-        "priceRange": "₹2000-₹8000",
-        "openingHoursSpecification": {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-            "opens": "10:00",
-            "closes": "19:00"
+        terra: {
+          50: '#fdf5ef',
+          100: '#fae8d9',
+          200: '#f4ceb2',
+          300: '#edaf81',
+          400: '#e48a4e',
+          500: '#dd6f2e',
+          600: '#c95524',
+          700: '#a94020',
+          800: '#8a3521',
+          900: '#712e1e',
+          950: '#3d150e',
+        },
+        cream: {
+          50: '#fefdfb',
+          100: '#fdf9f3',
+          200: '#faf5ea',
+          300: '#f5ede0',
+          400: '#ede0cd',
+          500: '#e0ccae',
+          600: '#c9a87c',
+          700: '#a88558',
+          800: '#8a6c46',
+          900: '#725a3c',
+        },
+        bark: {
+          50: '#f9f6f3',
+          100: '#f0ebe3',
+          200: '#e0d4c5',
+          300: '#ccb9a1',
+          400: '#b59a7b',
+          500: '#a58464',
+          600: '#987357',
+          700: '#7f5e49',
+          800: '#684e3f',
+          900: '#564135',
+          950: '#2d211b',
+        },
+        forest: {
+          DEFAULT: '#2d3a2e',
+          light: '#3d4f3e',
         }
+      },
+      fontFamily: {
+        heading: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+        body: ['"DM Sans"', 'system-ui', 'sans-serif'],
+      },
+      animation: {
+        'fade-up': 'fadeUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards',
+        'fade-up-delay-1': 'fadeUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.15s forwards',
+        'fade-up-delay-2': 'fadeUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.3s forwards',
+        'fade-up-delay-3': 'fadeUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.45s forwards',
+        'fade-up-delay-4': 'fadeUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.6s forwards',
+        'fade-in': 'fadeIn 0.6s ease forwards',
+        'slide-left': 'slideLeft 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+        'slide-right': 'slideRight 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+        'scale-in': 'scaleIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+        'grow-line': 'growLine 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.3s forwards',
+        'pulse-ring': 'pulseRing 2s ease-in-out infinite',
+        'float': 'float 6s ease-in-out infinite',
+        'leaf-sway': 'leafSway 4s ease-in-out infinite',
+      },
+      keyframes: {
+        fadeUp: {
+          '0%': { opacity: '0', transform: 'translateY(40px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+        slideLeft: {
+          '0%': { opacity: '0', transform: 'translateX(-50px)' },
+          '100%': { opacity: '1', transform: 'translateX(0)' },
+        },
+        slideRight: {
+          '0%': { opacity: '0', transform: 'translateX(50px)' },
+          '100%': { opacity: '1', transform: 'translateX(0)' },
+        },
+        scaleIn: {
+          '0%': { opacity: '0', transform: 'scale(0.8)' },
+          '100%': { opacity: '1', transform: 'scale(1)' },
+        },
+        growLine: {
+          '0%': { width: '0px' },
+          '100%': { width: '60px' },
+        },
+        pulseRing: {
+          '0%, 100%': { transform: 'scale(1)', opacity: '0.5' },
+          '50%': { transform: 'scale(1.4)', opacity: '0' },
+        },
+        float: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-10px)' },
+        },
+        leafSway: {
+          '0%, 100%': { transform: 'rotate(-3deg)' },
+          '50%': { transform: 'rotate(3deg)' },
+        },
+      }
     }
-    </script>
-    
-    <style>
-        :root {
-            --sage: #7A9B6F;
-            --sage-light: #A8C89E;
-            --sage-dark: #556B53;
-            --terracotta: #C97860;
-            --terracotta-light: #E8B4A3;
-            --cream: #F5F1ED;
-            --warm-brown: #6B5347;
-            --text-dark: #3D3833;
-            --text-light: #7D7571;
-            --white: #FFFFFF;
-            --gold: #B8956A;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: 'Lato', sans-serif;
-            background-color: var(--cream);
-            color: var(--text-dark);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        /* Navigation */
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            background: rgba(255, 241, 237, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(122, 155, 111, 0.1);
-            padding: 0 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 70px;
-            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
-        }
-
-        .logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.8rem;
-            font-weight: 600;
-            color: var(--sage);
-            letter-spacing: -0.5px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .logo-emoji {
-            font-size: 1.5rem;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2.5rem;
-            list-style: none;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: var(--text-dark);
-            font-size: 0.95rem;
-            font-weight: 500;
-            letter-spacing: 0.5px;
-            transition: color 0.3s ease;
-            position: relative;
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -4px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--sage);
-            transition: width 0.3s ease;
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-
-        .nav-cta {
-            background: linear-gradient(135deg, var(--sage) 0%, var(--sage-light) 100%);
-            color: var(--white) !important;
-            padding: 10px 28px;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            box-shadow: 0 4px 15px rgba(122, 155, 111, 0.2);
-        }
-
-        .nav-cta:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(122, 155, 111, 0.3);
-        }
-
-        /* Mobile nav toggle */
-        .nav-toggle {
-            display: none;
-            background: none;
-            border: none;
-            color: var(--sage);
-            font-size: 1.5rem;
-            cursor: pointer;
-        }
-
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-            .nav-toggle {
-                display: block;
-            }
-        }
-
-        /* Hero Section */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 0 5%;
-            padding-top: 70px;
-            background: linear-gradient(135deg, rgba(122, 155, 111, 0.05) 0%, rgba(201, 120, 96, 0.05) 100%),
-                        url('https://images.unsplash.com/photo-1595328055557-f7ff46714a0e?w=1920&q=80') center/cover no-repeat;
-            background-attachment: fixed;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(180deg, rgba(255, 241, 237, 0.1) 0%, rgba(61, 56, 51, 0.3) 100%);
-            pointer-events: none;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 10;
-            max-width: 700px;
-            animation: fadeInUp 1s ease 0.2s forwards;
-            opacity: 0;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .hero-eyebrow {
-            font-size: 0.85rem;
-            font-weight: 700;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: var(--sage);
-            margin-bottom: 1rem;
-            opacity: 0;
-            animation: fadeInUp 1s ease 0.4s forwards;
-        }
-
-        .hero h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 4rem;
-            font-weight: 700;
-            color: var(--text-dark);
-            margin-bottom: 1.5rem;
-            line-height: 1.1;
-            text-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
-            opacity: 0;
-            animation: fadeInUp 1s ease 0.6s forwards;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            color: var(--text-light);
-            margin-bottom: 2.5rem;
-            line-height: 1.8;
-            opacity: 0;
-            animation: fadeInUp 1s ease 0.8s forwards;
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 1.5rem;
-            justify-content: center;
-            flex-wrap: wrap;
-            opacity: 0;
-            animation: fadeInUp 1s ease 1s forwards;
-        }
-
-        .btn {
-            padding: 14px 40px;
-            border-radius: 50px;
-            font-size: 0.95rem;
-            font-weight: 600;
-            letter-spacing: 0.5px;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            cursor: pointer;
-            border: none;
-            display: inline-block;
-        }
-
-        .btn-primary {
-            background: linear-gradient(135deg, var(--sage) 0%, var(--sage-light) 100%);
-            color: var(--white);
-            box-shadow: 0 6px 20px rgba(122, 155, 111, 0.2);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 28px rgba(122, 155, 111, 0.3);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: var(--text-dark);
-            border: 2px solid var(--text-dark);
-        }
-
-        .btn-secondary:hover {
-            background: var(--text-dark);
-            color: var(--white);
-            transform: translateY(-3px);
-        }
-
-        /* Services Section */
-        .services {
-            padding: 120px 5%;
-            background: var(--white);
-            position: relative;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 5rem;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .section-eyebrow {
-            font-size: 0.85rem;
-            font-weight: 700;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: var(--sage);
-            margin-bottom: 0.5rem;
-        }
-
-        .section-header h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
-            color: var(--text-dark);
-            margin-bottom: 1.5rem;
-            line-height: 1.2;
-        }
-
-        .section-header p {
-            color: var(--text-light);
-            font-size: 1.05rem;
-            line-height: 1.7;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .service-card {
-            background: var(--cream);
-            border-radius: 12px;
-            overflow: hidden;
-            transition: all 0.4s ease;
-            border: 1px solid rgba(122, 155, 111, 0.1);
-            opacity: 0;
-            animation: slideIn 0.6s ease forwards;
-        }
-
-        @keyframes slideIn {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .service-card:nth-child(1) { animation-delay: 0.1s; }
-        .service-card:nth-child(2) { animation-delay: 0.2s; }
-        .service-card:nth-child(3) { animation-delay: 0.3s; }
-        .service-card:nth-child(4) { animation-delay: 0.4s; }
-        .service-card:nth-child(5) { animation-delay: 0.5s; }
-
-        .service-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 40px rgba(122, 155, 111, 0.15);
-            border-color: var(--sage);
-        }
-
-        .service-image {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            transition: transform 0.4s ease;
-        }
-
-        .service-card:hover .service-image {
-            transform: scale(1.05);
-        }
-
-        .service-content {
-            padding: 2rem;
-        }
-
-        .service-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .service-content h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.4rem;
-            color: var(--text-dark);
-            margin-bottom: 0.8rem;
-        }
-
-        .service-content p {
-            color: var(--text-light);
-            font-size: 0.95rem;
-            line-height: 1.6;
-            margin-bottom: 1rem;
-        }
-
-        .service-price {
-            color: var(--sage);
-            font-weight: 600;
-            font-size: 0.95rem;
-        }
-
-        /* Team Section */
-        .team {
-            padding: 120px 5%;
-            background: linear-gradient(135deg, rgba(122, 155, 111, 0.05) 0%, rgba(201, 120, 96, 0.05) 100%);
-        }
-
-        .team-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 3rem;
-            max-width: 1200px;
-            margin: 0 auto;
-            margin-top: 4rem;
-        }
-
-        .team-card {
-            text-align: center;
-            opacity: 0;
-            animation: slideIn 0.6s ease forwards;
-        }
-
-        .team-card:nth-child(1) { animation-delay: 0.1s; }
-        .team-card:nth-child(2) { animation-delay: 0.2s; }
-        .team-card:nth-child(3) { animation-delay: 0.3s; }
-
-        .team-image {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin: 0 auto 1.5rem;
-            border: 4px solid var(--sage);
-            transition: transform 0.4s ease;
-        }
-
-        .team-card:hover .team-image {
-            transform: scale(1.05);
-        }
-
-        .team-card h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.4rem;
-            color: var(--text-dark);
-            margin-bottom: 0.4rem;
-        }
-
-        .team-role {
-            color: var(--sage);
-            font-size: 0.9rem;
-            font-weight: 600;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            margin-bottom: 1rem;
-        }
-
-        .team-card p {
-            color: var(--text-light);
-            line-height: 1.7;
-            font-size: 0.95rem;
-        }
-
-        /* Ingredients Section */
-        .ingredients {
-            padding: 120px 5%;
-            background: var(--white);
-        }
-
-        .ingredients-content {
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .ingredients-intro {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-            margin-bottom: 5rem;
-        }
-
-        .ingredients-text h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.2rem;
-            color: var(--text-dark);
-            margin-bottom: 1.5rem;
-        }
-
-        .ingredients-text p {
-            color: var(--text-light);
-            margin-bottom: 1.5rem;
-            line-height: 1.8;
-        }
-
-        .ingredients-list {
-            list-style: none;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1rem;
-            margin-top: 2rem;
-        }
-
-        .ingredients-list li {
-            display: flex;
-            gap: 0.8rem;
-            align-items: center;
-            color: var(--text-dark);
-            font-weight: 500;
-        }
-
-        .ingredients-list li::before {
-            content: '🌿';
-            font-size: 1.2rem;
-        }
-
-        .ingredients-image {
-            width: 100%;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-        }
-
-        .ingredients-image img {
-            width: 100%;
-            height: 400px;
-            object-fit: cover;
-            transition: transform 0.4s ease;
-        }
-
-        .ingredients-image:hover img {
-            transform: scale(1.05);
-        }
-
-        @media (max-width: 768px) {
-            .ingredients-intro {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-        }
-
-        /* Testimonials Section */
-        .testimonials {
-            padding: 120px 5%;
-            background: linear-gradient(135deg, rgba(122, 155, 111, 0.05) 0%, rgba(201, 120, 96, 0.05) 100%);
-        }
-
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2.5rem;
-            max-width: 1200px;
-            margin: 0 auto;
-            margin-top: 4rem;
-        }
-
-        .testimonial-card {
-            background: var(--white);
-            padding: 2.5rem;
-            border-radius: 12px;
-            border-left: 4px solid var(--sage);
-            opacity: 0;
-            animation: slideIn 0.6s ease forwards;
-        }
-
-        .testimonial-card:nth-child(1) { animation-delay: 0.1s; }
-        .testimonial-card:nth-child(2) { animation-delay: 0.2s; }
-        .testimonial-card:nth-child(3) { animation-delay: 0.3s; }
-
-        .testimonial-stars {
-            color: var(--gold);
-            font-size: 1rem;
-            margin-bottom: 1rem;
-            letter-spacing: 2px;
-        }
-
-        .testimonial-text {
-            color: var(--text-light);
-            font-size: 0.95rem;
-            line-height: 1.7;
-            margin-bottom: 1.5rem;
-            font-style: italic;
-        }
-
-        .testimonial-author {
-            font-weight: 600;
-            color: var(--text-dark);
-            font-size: 0.95rem;
-        }
-
-        .testimonial-role {
-            color: var(--sage);
-            font-size: 0.85rem;
-            font-weight: 500;
-        }
-
-        /* Booking Section */
-        .booking {
-            padding: 120px 5%;
-            background: var(--white);
-        }
-
-        .booking-container {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .booking-form {
-            background: var(--cream);
-            padding: 3rem;
-            border-radius: 12px;
-            border: 1px solid rgba(122, 155, 111, 0.15);
-        }
-
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            color: var(--text-dark);
-            font-weight: 600;
-            font-size: 0.95rem;
-        }
-
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-            width: 100%;
-            padding: 12px 16px;
-            border: 1px solid rgba(122, 155, 111, 0.2);
-            border-radius: 8px;
-            font-family: 'Lato', sans-serif;
-            font-size: 0.95rem;
-            color: var(--text-dark);
-            transition: border-color 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: var(--sage);
-            box-shadow: 0 0 0 3px rgba(122, 155, 111, 0.1);
-        }
-
-        .form-group textarea {
-            resize: vertical;
-            min-height: 100px;
-        }
-
-        .form-submit {
-            width: 100%;
-            background: linear-gradient(135deg, var(--sage) 0%, var(--sage-light) 100%);
-            color: var(--white);
-            padding: 14px 28px;
-            border: none;
-            border-radius: 50px;
-            font-size: 0.95rem;
-            font-weight: 600;
-            letter-spacing: 0.5px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(122, 155, 111, 0.2);
-        }
-
-        .form-submit:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 25px rgba(122, 155, 111, 0.3);
-        }
-
-        .form-submit:active {
-            transform: translateY(0);
-        }
-
-        /* Floating CTA */
-        .floating-cta {
-            position: fixed;
-            bottom: 2rem;
-            right: 2rem;
-            z-index: 100;
-            animation: bounce 2s ease-in-out infinite;
-        }
-
-        @keyframes bounce {
-            0%, 100% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-10px);
-            }
-        }
-
-        .floating-cta:hover {
-            animation: none;
-        }
-
-        .floating-btn {
-            display: flex;
-            align-items: center;
-            gap: 0.8rem;
-            background: linear-gradient(135deg, var(--sage) 0%, var(--sage-light) 100%);
-            color: var(--white);
-            padding: 12px 24px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.9rem;
-            box-shadow: 0 6px 25px rgba(122, 155, 111, 0.3);
-            transition: all 0.3s ease;
-        }
-
-        .floating-btn:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 35px rgba(122, 155, 111, 0.4);
-        }
-
-        /* Footer */
-        footer {
-            background: var(--text-dark);
-            color: var(--cream);
-            padding: 4rem 5%;
-            text-align: center;
-        }
-
-        footer p {
-            margin: 0.5rem 0;
-            font-size: 0.95rem;
-            opacity: 0.85;
-        }
-
-        footer .footer-links {
-            display: flex;
-            gap: 2rem;
-            justify-content: center;
-            margin-top: 1.5rem;
-            flex-wrap: wrap;
-        }
-
-        footer a {
-            color: var(--cream);
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        footer a:hover {
-            color: var(--sage-light);
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            nav {
-                padding: 0 3%;
-            }
-
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .hero p {
-                font-size: 1rem;
-            }
-
-            .hero-buttons {
-                flex-direction: column;
-                gap: 1rem;
-            }
-
-            .btn {
-                width: 100%;
-            }
-
-            .section-header h2 {
-                font-size: 1.8rem;
-            }
-
-            .services,
-            .team,
-            .ingredients,
-            .testimonials,
-            .booking {
-                padding: 80px 3%;
-            }
-
-            .ingredients-text h2 {
-                font-size: 1.6rem;
-            }
-
-            .booking-form {
-                padding: 2rem;
-            }
-
-            .floating-cta {
-                bottom: 1rem;
-                right: 1rem;
-            }
-
-            .floating-btn {
-                padding: 10px 16px;
-                font-size: 0.8rem;
-            }
-        }
-
-        /* Prefers reduced motion */
-        @media (prefers-reduced-motion: reduce) {
-            * {
-                animation-duration: 0.01ms !important;
-                animation-iteration-count: 1 !important;
-                transition-duration: 0.01ms !important;
-            }
-        }
-    </style>
+  }
+}
+</script>
+
+<!-- JSON-LD Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HairSalon",
+  "name": "Sage & Botanicals Hair Studio",
+  "description": "A boho-inspired salon offering plant-based hair care, henna coloring, Ayurvedic treatments, and sustainable beauty rituals.",
+  "url": "https://invictus-salon-demos.vercel.app/salon-v2-boho.html",
+  "telephone": "+91-22-2600-5678",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "18 Chapel Road, Bandra West",
+    "addressLocality": "Mumbai",
+    "addressRegion": "Maharashtra",
+    "postalCode": "400050",
+    "addressCountry": "IN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 19.0544,
+    "longitude": 72.8373
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "opens": "10:00",
+      "closes": "19:30"
+    }
+  ],
+  "priceRange": "₹₹₹",
+  "image": "https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1200&q=80",
+  "sameAs": [
+    "https://instagram.com/sageandbotanicals"
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "247"
+  }
+}
+</script>
+
+<style>
+  /* Base resets */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'DM Sans', system-ui, sans-serif; color: #2d211b; background: #fefdfb; overflow-x: hidden; }
+  
+  /* Typography helpers */
+  .font-heading { font-family: 'Cormorant Garamond', Georgia, serif; }
+  
+  /* Scroll animation base states */
+  .anim-hidden {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+  .anim-hidden.anim-slide-left {
+    transform: translateX(-50px);
+    transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .anim-hidden.anim-slide-right {
+    transform: translateX(50px);
+    transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .anim-hidden.anim-scale {
+    transform: scale(0.85);
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .anim-visible {
+    opacity: 1 !important;
+    transform: translateY(0) translateX(0) scale(1) !important;
+  }
+  
+  /* Stagger delays */
+  .stagger-1 { transition-delay: 0.1s !important; }
+  .stagger-2 { transition-delay: 0.2s !important; }
+  .stagger-3 { transition-delay: 0.3s !important; }
+  .stagger-4 { transition-delay: 0.4s !important; }
+  .stagger-5 { transition-delay: 0.5s !important; }
+  .stagger-6 { transition-delay: 0.6s !important; }
+  .stagger-7 { transition-delay: 0.7s !important; }
+  .stagger-8 { transition-delay: 0.8s !important; }
+  
+  /* Hero parallax */
+  .hero-bg {
+    will-change: transform;
+    transition: transform 0.1s linear;
+  }
+  
+  /* Card hover effects */
+  .service-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 48px rgba(45, 33, 27, 0.12);
+  }
+  .service-card .card-img {
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+  .service-card:hover .card-img {
+    transform: scale(1.06);
+  }
+  
+  /* Team card hover */
+  .team-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .team-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 40px rgba(45, 33, 27, 0.1);
+  }
+  .team-card .team-img {
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .team-card:hover .team-img {
+    transform: scale(1.04);
+  }
+  
+  /* Ingredient card */
+  .ingredient-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .ingredient-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 32px rgba(45, 33, 27, 0.1);
+  }
+  
+  /* Testimonial styling */
+  .testimonial-card {
+    transition: transform 0.3s ease;
+  }
+  
+  /* Form input focus */
+  .form-input {
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  .form-input:focus {
+    outline: none;
+    border-color: #7a8f63;
+    box-shadow: 0 0 0 3px rgba(122, 143, 99, 0.15);
+  }
+  
+  /* Gold divider grow animation */
+  .divider-line {
+    width: 0;
+    transition: width 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.3s;
+  }
+  .anim-visible .divider-line,
+  .divider-line.anim-visible {
+    width: 60px !important;
+  }
+  
+  /* Eyebrow letter spacing animation */
+  .eyebrow-text {
+    letter-spacing: 0.2em;
+    transition: letter-spacing 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.8s ease;
+  }
+  .anim-visible .eyebrow-text,
+  .eyebrow-text.anim-visible {
+    letter-spacing: 0.08em;
+  }
+  
+  /* Navigation scroll state */
+  .nav-scrolled {
+    background: rgba(254, 253, 251, 0.97) !important;
+    backdrop-filter: blur(12px) !important;
+    box-shadow: 0 2px 20px rgba(45, 33, 27, 0.06) !important;
+  }
+  
+  /* Floating CTA */
+  .float-cta {
+    transition: width 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                border-radius 0.3s ease,
+                background-color 0.3s ease;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .float-cta:hover {
+    width: 170px !important;
+    border-radius: 28px !important;
+  }
+  .float-cta .cta-text {
+    opacity: 0;
+    transition: opacity 0.2s ease 0.1s;
+  }
+  .float-cta:hover .cta-text {
+    opacity: 1;
+  }
+  
+  /* Leaf decorations */
+  .leaf-decor {
+    pointer-events: none;
+    user-select: none;
+  }
+  
+  /* Smooth image loading */
+  img {
+    transition: opacity 0.3s ease;
+  }
+  
+  /* Selection color */
+  ::selection {
+    background: #d4dac7;
+    color: #2d211b;
+  }
+  
+  /* Focus visible for accessibility */
+  :focus-visible {
+    outline: 2px solid #7a8f63;
+    outline-offset: 2px;
+  }
+  
+  /* prefers-reduced-motion */
+  @media (prefers-reduced-motion: reduce) {
+    .anim-hidden {
+      opacity: 1 !important;
+      transform: none !important;
+      transition: none !important;
+    }
+    .hero-bg { transition: none !important; }
+    .service-card, .team-card, .ingredient-card, .testimonial-card {
+      transition: none !important;
+    }
+    .service-card:hover, .team-card:hover { transform: none !important; }
+    .service-card .card-img, .team-card .team-img { transition: none !important; }
+    .divider-line { width: 60px !important; transition: none !important; }
+    .eyebrow-text { letter-spacing: 0.08em !important; transition: none !important; }
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+  
+  /* Custom scrollbar */
+  ::-webkit-scrollbar { width: 8px; }
+  ::-webkit-scrollbar-track { background: #faf5ea; }
+  ::-webkit-scrollbar-thumb { background: #b4bfa2; border-radius: 4px; }
+  ::-webkit-scrollbar-thumb:hover { background: #7a8f63; }
+</style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav>
-        <div class="logo">
-            <span class="logo-emoji">🌿</span>
-            <span>Sage & Botanicals</span>
-        </div>
-        <ul class="nav-links">
-            <li><a href="#services">Services</a></li>
-            <li><a href="#team">Team</a></li>
-            <li><a href="#ingredients">Ingredients</a></li>
-            <li><a href="#testimonials">Reviews</a></li>
-        </ul>
-        <a href="#booking" class="nav-cta">Book Now</a>
-        <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
-    </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <div class="hero-eyebrow">Organic Hair Studio • Aundh, Pune</div>
-            <h1>Your Natural Beauty Deserves Natural Care</h1>
-            <p>Plant-based treatments, sustainable practices, and stylists who celebrate your unique hair journey. Welcome to the boho revolution.</p>
-            <div class="hero-buttons">
-                <a href="#booking" class="btn btn-primary">Book Your Consultation</a>
-                <a href="#services" class="btn btn-secondary">Explore Services</a>
-            </div>
-        </div>
-    </section>
+<!-- Skip to content -->
+<a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:bg-sage-600 focus:text-white focus:px-4 focus:py-2 focus:rounded-lg font-body">
+  Skip to main content
+</a>
 
-    <!-- Services Section -->
-    <section class="services" id="services">
-        <div class="section-header">
-            <div class="section-eyebrow">What We Offer</div>
-            <h2>Services Rooted in Nature</h2>
-            <p>Each service begins with a personal consultation and celebrates your natural beauty through plant-based treatments.</p>
-        </div>
-        <div class="services-grid">
-            <div class="service-card">
-                <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=600&q=80" alt="Natural Hair Cut" class="service-image">
-                <div class="service-content">
-                    <div class="service-icon">✂️</div>
-                    <h3>Natural Cuts</h3>
-                    <p>Precision cuts that honor your hair's natural texture and movement. From bobs to layers, always personalized.</p>
-                    <div class="service-price">Starting ₹3,000</div>
-                </div>
-            </div>
-            <div class="service-card">
-                <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?w=600&q=80" alt="Plant-Based Coloring" class="service-image">
-                <div class="service-content">
-                    <div class="service-icon">🎨</div>
-                    <h3>Plant-Based Color</h3>
-                    <p>Botanical dyes, henna, and ammonia-free colors. Transform your look without compromising hair health.</p>
-                    <div class="service-price">Starting ₹4,500</div>
-                </div>
-            </div>
-            <div class="service-card">
-                <img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=600&q=80" alt="Bridal Styling" class="service-image">
-                <div class="service-content">
-                    <div class="service-icon">👑</div>
-                    <h3>Boho Bridal</h3>
-                    <p>Romantic, flowing styles for your special day. Loose waves, flower crowns, and timeless boho elegance.</p>
-                    <div class="service-price">Starting ₹7,500</div>
-                </div>
-            </div>
-            <div class="service-card">
-                <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=600&q=80" alt="Scalp Treatment" class="service-image">
-                <div class="service-content">
-                    <div class="service-icon">🌱</div>
-                    <h3>Scalp Wellness</h3>
-                    <p>Detoxifying treatments with organic oils, herbs, and natural remedies. Heal, nourish, revive.</p>
-                    <div class="service-price">Starting ₹2,500</div>
-                </div>
-            </div>
-            <div class="service-card">
-                <img src="https://images.unsplash.com/photo-1540575467063-178f50002c4b?w=600&q=80" alt="Extensions" class="service-image">
-                <div class="service-content">
-                    <div class="service-icon">✨</div>
-                    <h3>Natural Extensions</h3>
-                    <p>Ethical, human-hair extensions that blend seamlessly. Volume without compromise.</p>
-                    <div class="service-price">Starting ₹6,000</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Team Section -->
-    <section class="team" id="team">
-        <div class="section-header">
-            <div class="section-eyebrow">Meet Our Artists</div>
-            <h2>Stylists Who Care</h2>
-            <p>Each stylist on our team is trained in organic practices and brings years of experience in sustainable beauty.</p>
-        </div>
-        <div class="team-grid">
-            <div class="team-card">
-                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300&q=80" alt="Priya Nair" class="team-image">
-                <h3>Priya Nair</h3>
-                <div class="team-role">Color Specialist</div>
-                <p>Priya's passion is botanical color. With 8 years in organic salons, she transforms hair using henna, indigo, and plant-based dyes.</p>
-            </div>
-            <div class="team-card">
-                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&q=80" alt="Rohan Sharma" class="team-image">
-                <h3>Rohan Sharma</h3>
-                <div class="team-role">Master Stylist</div>
-                <p>Rohan specializes in cuts and texture. He believes every hair type has its own beauty — his job is to reveal it.</p>
-            </div>
-            <div class="team-card">
-                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&q=80" alt="Maya Desai" class="team-image">
-                <h3>Maya Desai</h3>
-                <div class="team-role">Wellness Coach</div>
-                <p>Maya combines hair care with holistic wellness. She creates personalized rituals that nurture both hair and soul.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Ingredients Section -->
-    <section class="ingredients" id="ingredients">
-        <div class="ingredients-content">
-            <div class="section-header" style="margin-bottom: 3rem;">
-                <div class="section-eyebrow">Natural Ingredients</div>
-                <h2>What We Use</h2>
-                <p>Pure, organic, ethically sourced ingredients that nourish hair without harsh chemicals.</p>
-            </div>
-            <div class="ingredients-intro">
-                <div class="ingredients-text">
-                    <h2>Certified Organic Beauty</h2>
-                    <p>Every product we use is carefully selected from trusted organic suppliers. No sulfates, parabens, silicones, or synthetic fragrances.</p>
-                    <ul class="ingredients-list">
-                        <li>Cold-pressed coconut oil</li>
-                        <li>Pure henna powder</li>
-                        <li>Organic argan oil</li>
-                        <li>Herbal indigo</li>
-                        <li>Aloe vera gel</li>
-                        <li>Rose water</li>
-                        <li>Sesame oil</li>
-                        <li>Neem extracts</li>
-                    </ul>
-                </div>
-                <div class="ingredients-image">
-                    <img src="https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?w=600&q=80" alt="Organic ingredients">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section class="testimonials" id="testimonials">
-        <div class="section-header">
-            <div class="section-eyebrow">Guest Stories</div>
-            <h2>What Our Guests Say</h2>
-            <p>Real transformations from real people who chose natural beauty.</p>
-        </div>
-        <div class="testimonials-grid">
-            <div class="testimonial-card">
-                <div class="testimonial-stars">★★★★★</div>
-                <div class="testimonial-text">"Finally found a salon that celebrates my natural hair! The team at Sage & Botanicals is incredibly knowledgeable and genuinely cares."</div>
-                <div class="testimonial-author">Anjali Gupta</div>
-                <div class="testimonial-role">Artist & Content Creator</div>
-            </div>
-            <div class="testimonial-card">
-                <div class="testimonial-stars">★★★★★</div>
-                <div class="testimonial-text">"The plant-based color is amazing. My hair has never felt healthier. Plus, the vibe of the salon is so calming and authentic."</div>
-                <div class="testimonial-author">Sneha Deshpande</div>
-                <div class="testimonial-role">Yoga Instructor</div>
-            </div>
-            <div class="testimonial-card">
-                <div class="testimonial-stars">★★★★★</div>
-                <div class="testimonial-text">"My bridal look was exactly what I dreamed of — romantic, natural, and it lasted all night. Rohan and the team are true artists."</div>
-                <div class="testimonial-author">Neha Patel</div>
-                <div class="testimonial-role">Wedding Bride</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Booking Section -->
-    <section class="booking" id="booking">
-        <div class="section-header">
-            <div class="section-eyebrow">Get Started</div>
-            <h2>Book Your Consultation</h2>
-            <p>Ready for your natural transformation? Fill out the form below and we'll be in touch within 24 hours.</p>
-        </div>
-        <div class="booking-container">
-            <form class="booking-form" id="bookingForm">
-                <div class="form-group">
-                    <label for="name">Your Name</label>
-                    <input type="text" id="name" name="name" required placeholder="Priya Sharma">
-                </div>
-                <div class="form-group">
-                    <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone" name="phone" required placeholder="+91 98765 43210">
-                </div>
-                <div class="form-group">
-                    <label for="service">Service Interested In</label>
-                    <select id="service" name="service" required>
-                        <option value="">Select a service</option>
-                        <option value="Natural Cuts">Natural Cuts</option>
-                        <option value="Plant-Based Color">Plant-Based Color</option>
-                        <option value="Boho Bridal">Boho Bridal</option>
-                        <option value="Scalp Wellness">Scalp Wellness</option>
-                        <option value="Natural Extensions">Natural Extensions</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="date">Preferred Date</label>
-                    <input type="date" id="date" name="date" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" placeholder="Tell us about your hair journey..."></textarea>
-                </div>
-                <button type="submit" class="form-submit">Book Consultation</button>
-            </form>
-        </div>
-    </section>
-
-    <!-- Floating CTA -->
-    <div class="floating-cta">
-        <a href="https://wa.me/919876543210?text=Hi%20Sage%20%26%20Botanicals%2C%20I%20would%20like%20to%20book%20a%20consultation." target="_blank" class="floating-btn">
-            📱 WhatsApp
-        </a>
+<!-- ============================================ -->
+<!-- NAVIGATION -->
+<!-- ============================================ -->
+<nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-300" role="navigation" aria-label="Main navigation">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <!-- Logo -->
+    <a href="#" class="flex flex-col items-start" aria-label="Sage & Botanicals - Home">
+      <span class="font-heading text-2xl font-bold text-forest tracking-tight">Sage & Botanicals</span>
+      <span class="font-body text-[10px] uppercase tracking-[0.15em] text-bark-600 -mt-0.5">Hair Studio</span>
+    </a>
+    
+    <!-- Desktop Nav Links -->
+    <div class="hidden md:flex items-center gap-8">
+      <a href="#services" class="font-body text-sm text-bark-700 hover:text-sage-700 transition-colors duration-200">Services</a>
+      <a href="#team" class="font-body text-sm text-bark-700 hover:text-sage-700 transition-colors duration-200">Our Team</a>
+      <a href="#ingredients" class="font-body text-sm text-bark-700 hover:text-sage-700 transition-colors duration-200">Ingredients</a>
+      <a href="#testimonials" class="font-body text-sm text-bark-700 hover:text-sage-700 transition-colors duration-200">Stories</a>
+      <a href="#booking" class="inline-flex items-center gap-2 px-6 py-2.5 bg-sage-600 text-white font-body text-sm font-semibold rounded-full hover:bg-sage-700 transition-colors duration-200" aria-label="Book an appointment">
+        Book Now
+      </a>
     </div>
+    
+    <!-- Mobile Menu Button -->
+    <button id="mobile-menu-btn" class="md:hidden flex flex-col gap-1.5 p-2" aria-label="Toggle menu" aria-expanded="false">
+      <span class="w-6 h-0.5 bg-forest transition-all duration-300" id="bar1"></span>
+      <span class="w-6 h-0.5 bg-forest transition-all duration-300" id="bar2"></span>
+      <span class="w-4 h-0.5 bg-forest transition-all duration-300" id="bar3"></span>
+    </button>
+  </div>
+  
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="md:hidden hidden bg-cream-50/98 backdrop-blur-lg border-t border-sage-100">
+    <div class="max-w-7xl mx-auto px-6 py-6 flex flex-col gap-4">
+      <a href="#services" class="font-body text-lg text-bark-800 hover:text-sage-700 py-2 mobile-nav-link">Services</a>
+      <a href="#team" class="font-body text-lg text-bark-800 hover:text-sage-700 py-2 mobile-nav-link">Our Team</a>
+      <a href="#ingredients" class="font-body text-lg text-bark-800 hover:text-sage-700 py-2 mobile-nav-link">Ingredients</a>
+      <a href="#testimonials" class="font-body text-lg text-bark-800 hover:text-sage-700 py-2 mobile-nav-link">Stories</a>
+      <a href="#booking" class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-sage-600 text-white font-body text-base font-semibold rounded-full hover:bg-sage-700 transition-colors mobile-nav-link">
+        Book Now
+      </a>
+    </div>
+  </div>
+</nav>
 
-    <!-- Footer -->
-    <footer>
-        <p><strong>Sage & Botanicals Hair Studio</strong></p>
-        <p>Aundh, Pune • Maharashtra 411007 • India</p>
-        <p>📞 +91-9876543210 • 📧 hello@sageandbot anicals.in</p>
-        <p>⏰ Mon-Sat: 10 AM - 7 PM • Sun: 11 AM - 5 PM</p>
-        <div class="footer-links">
-            <a href="https://instagram.com" target="_blank">Instagram</a>
-            <a href="https://facebook.com" target="_blank">Facebook</a>
-            <a href="https://pinterest.com" target="_blank">Pinterest</a>
+<!-- ============================================ -->
+<!-- HERO SECTION -->
+<!-- ============================================ -->
+<section id="hero" class="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden" role="banner" aria-label="Welcome to Sage & Botanicals">
+  <!-- Parallax Background -->
+  <div class="hero-bg absolute inset-0 z-0">
+    <img 
+      src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1920&q=80" 
+      alt="Stylist carefully working on a client's hair in a warm, natural-light salon" 
+      class="w-full h-full object-cover"
+      loading="eager"
+      fetchpriority="high"
+    >
+  </div>
+  
+  <!-- Overlay -->
+  <div class="absolute inset-0 z-10" style="background: linear-gradient(180deg, rgba(45,58,46,0.35) 0%, rgba(45,58,46,0.55) 50%, rgba(45,58,46,0.75) 100%);"></div>
+  
+  <!-- Leaf decorative element -->
+  <div class="leaf-decor absolute top-20 right-10 opacity-20 z-20 hidden lg:block animate-leaf-sway">
+    <svg width="80" height="120" viewBox="0 0 80 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M40 0C40 0 80 40 80 80C80 120 40 120 40 120C40 120 0 120 0 80C0 40 40 0 40 0Z" fill="rgba(212,218,199,0.3)"/>
+      <path d="M40 10V110M25 40Q40 55 55 40M20 65Q40 80 60 65" stroke="rgba(212,218,199,0.4)" stroke-width="1"/>
+    </svg>
+  </div>
+  
+  <!-- Hero Content -->
+  <div class="relative z-20 text-center px-6 max-w-3xl mx-auto">
+    <p class="anim-hidden font-body text-xs uppercase tracking-[0.2em] text-cream-300 mb-6 eyebrow-text" data-anim="hero">
+      Bandra's Botanical Hair Sanctuary
+    </p>
+    <h1 class="anim-hidden stagger-1 font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6" data-anim="hero">
+      Rooted in Nature,<br>Styled with Soul
+    </h1>
+    <p class="anim-hidden stagger-2 font-body text-base md:text-lg text-cream-200 max-w-xl mx-auto mb-10 leading-relaxed" data-anim="hero">
+      Plant-powered rituals. Three botanical artists. A slow-beauty philosophy that honors your hair's true nature and the earth it grows from.
+    </p>
+    <div class="anim-hidden stagger-3 flex flex-col sm:flex-row items-center justify-center gap-4" data-anim="hero">
+      <a href="#booking" class="inline-flex items-center gap-2 px-8 py-3.5 bg-terra-500 text-white font-body text-sm font-semibold rounded-full hover:bg-terra-600 transition-colors duration-200 shadow-lg shadow-terra-500/20" aria-label="Book your botanical consultation">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        Book Your Ritual
+      </a>
+      <a href="#services" class="font-body text-sm text-cream-100 hover:text-white transition-colors underline underline-offset-4 decoration-cream-400/40 hover:decoration-white/60">
+        Explore Our Rituals ↓
+      </a>
+    </div>
+  </div>
+  
+  <!-- Scroll indicator -->
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 animate-float">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(245,237,224,0.5)" stroke-width="1.5">
+      <path d="M12 5v14M5 12l7 7 7-7"/>
+    </svg>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!-- MAIN CONTENT -->
+<!-- ============================================ -->
+<main id="main-content">
+
+<!-- ============================================ -->
+<!-- PHILOSOPHY / ABOUT -->
+<!-- ============================================ -->
+<section class="py-16 md:py-24 bg-cream-50" aria-label="Our Philosophy">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+      <!-- Image -->
+      <div class="anim-hidden anim-slide-left relative" data-anim="philosophy">
+        <img 
+          src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800&q=80" 
+          alt="Warm, inviting salon interior with natural wood furniture, hanging plants, and soft earth-toned decor" 
+          class="w-full rounded-2xl shadow-lg"
+          loading="lazy"
+          width="800"
+          height="600"
+        >
+        <!-- Decorative badge -->
+        <div class="absolute -bottom-4 -right-4 md:-bottom-6 md:-right-6 bg-sage-600 text-white px-5 py-3 rounded-xl shadow-lg">
+          <p class="font-heading text-2xl font-bold">100%</p>
+          <p class="font-body text-xs uppercase tracking-wider">Plant-Based</p>
         </div>
-        <p style="margin-top: 2rem; font-size: 0.85rem; opacity: 0.7;">© 2026 Sage & Botanicals. All rights reserved. Celebrating natural beauty, organically.</p>
-    </footer>
+      </div>
+      
+      <!-- Text -->
+      <div class="anim-hidden anim-slide-right" data-anim="philosophy">
+        <p class="eyebrow-text font-body text-xs uppercase tracking-[0.15em] text-terra-500 font-semibold mb-3">Our Philosophy</p>
+        <h2 class="font-heading text-3xl md:text-4xl font-bold text-forest mb-6 leading-tight">
+          Slow Beauty,<br>Deep Roots
+        </h2>
+        <div class="w-0 h-0.5 bg-terra-400 mb-6 divider-line"></div>
+        <p class="font-body text-bark-700 leading-relaxed mb-4">
+          Sage & Botanicals was born from a simple belief: your hair doesn't need synthetic chemicals to be beautiful. It needs patience, pure ingredients, and skilled hands that understand its unique language.
+        </p>
+        <p class="font-body text-bark-700 leading-relaxed mb-6">
+          Founded by three stylists who left mainstream salons behind, we've spent four years perfecting plant-based formulations with Ayurvedic herbs, cold-pressed oils, and botanical extracts. Every ritual is 90 minutes minimum — because transformation can't be rushed.
+        </p>
+        <div class="flex flex-wrap gap-3">
+          <span class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-sage-100 text-sage-800 rounded-full text-xs font-medium font-body">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm-1 15l-5-5 1.41-1.41L11 14.17l7.59-7.59L20 8l-9 9z"/></svg>
+            Cruelty-Free
+          </span>
+          <span class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-sage-100 text-sage-800 rounded-full text-xs font-medium font-body">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm-1 15l-5-5 1.41-1.41L11 14.17l7.59-7.59L20 8l-9 9z"/></svg>
+            Zero Waste
+          </span>
+          <span class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-sage-100 text-sage-800 rounded-full text-xs font-medium font-body">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm-1 15l-5-5 1.41-1.41L11 14.17l7.59-7.59L20 8l-9 9z"/></svg>
+            Vegan Products
+          </span>
+          <span class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-sage-100 text-sage-800 rounded-full text-xs font-medium font-body">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm-1 15l-5-5 1.41-1.41L11 14.17l7.59-7.59L20 8l-9 9z"/></svg>
+            Locally Sourced
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- Form Handler -->
-    <script>
-        document.getElementById('bookingForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const name = document.getElementById('name').value;
-            const phone = document.getElementById('phone').value;
-            const service = document.getElementById('service').value;
-            const date = document.getElementById('date').value;
-            const message = document.getElementById('message').value;
-            
-            const whatsappMessage = `Hi Sage & Botanicals! I'd like to book a consultation.\n\nName: ${name}\nPhone: ${phone}\nService: ${service}\nDate: ${date}\n\nMessage: ${message}`;
-            
-            window.open(`https://wa.me/919876543210?text=${encodeURIComponent(whatsappMessage)}`, '_blank');
-            
-            this.reset();
-        });
-    </script>
+<!-- ============================================ -->
+<!-- SERVICES SECTION -->
+<!-- ============================================ -->
+<section id="services" class="py-16 md:py-24 bg-white" aria-label="Our Services">
+  <div class="max-w-6xl mx-auto px-6">
+    <!-- Section Header -->
+    <div class="text-center mb-14 anim-hidden" data-anim="services-header">
+      <p class="eyebrow-text font-body text-xs uppercase tracking-[0.15em] text-terra-500 font-semibold mb-3">What We Offer</p>
+      <h2 class="font-heading text-3xl md:text-4xl font-bold text-forest mb-4">Botanical Hair Rituals</h2>
+      <div class="mx-auto h-0.5 bg-terra-400 divider-line"></div>
+      <p class="font-body text-bark-600 mt-5 max-w-xl mx-auto leading-relaxed">
+        Each ritual begins with a scalp reading and ends with a personalized home-care guide using only plants, oils, and time-honored Ayurvedic wisdom.
+      </p>
+    </div>
+    
+    <!-- Services Grid -->
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+      
+      <!-- Card 1: Botanical Cut -->
+      <div class="service-card anim-hidden stagger-1 bg-cream-50 rounded-2xl overflow-hidden shadow-sm" data-anim="services">
+        <div class="overflow-hidden aspect-[4/3]">
+          <img 
+            src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=600&q=80" 
+            alt="Stylist giving a precision haircut with natural light streaming through windows" 
+            class="card-img w-full h-full object-cover"
+            loading="lazy" width="600" height="450"
+          >
+        </div>
+        <div class="p-6">
+          <div class="flex items-center gap-2 mb-2">
+            <svg class="text-sage-600" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><line x1="20" y1="4" x2="8.12" y2="15.88"/><line x1="14.47" y1="14.48" x2="20" y2="20"/><line x1="8.12" y1="8.12" x2="12" y2="12"/></svg>
+            <h3 class="font-heading text-xl font-semibold text-forest">Botanical Cut & Shape</h3>
+          </div>
+          <p class="font-body text-sm text-bark-600 leading-relaxed mb-3">
+            A mindful cut that works with your hair's natural movement. We study your texture, growth patterns, and lifestyle before making a single snip.
+          </p>
+          <p class="font-body text-sm font-semibold text-terra-600">Starting ₹2,800</p>
+        </div>
+      </div>
+      
+      <!-- Card 2: Plant Color -->
+      <div class="service-card anim-hidden stagger-2 bg-cream-50 rounded-2xl overflow-hidden shadow-sm" data-anim="services">
+        <div class="overflow-hidden aspect-[4/3]">
+          <img 
+            src="https://images.unsplash.com/photo-1562322140-8baeececf3df?w=600&q=80" 
+            alt="Hair coloring process using natural botanical dyes in a well-lit salon" 
+            class="card-img w-full h-full object-cover"
+            loading="lazy" width="600" height="450"
+          >
+        </div>
+        <div class="p-6">
+          <div class="flex items-center gap-2 mb-2">
+            <svg class="text-sage-600" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+            <h3 class="font-heading text-xl font-semibold text-forest">Plant-Dye Coloring</h3>
+          </div>
+          <p class="font-body text-sm text-bark-600 leading-relaxed mb-3">
+            Pure henna, indigo, and botanical blends — zero ammonia, zero PPD. From subtle sun-kissed warmth to rich copper and deep burgundy.
+          </p>
+          <p class="font-body text-sm font-semibold text-terra-600">Starting ₹3,500</p>
+        </div>
+      </div>
+      
+      <!-- Card 3: Ayurvedic Treatment -->
+      <div class="service-card anim-hidden stagger-3 bg-cream-50 rounded-2xl overflow-hidden shadow-sm" data-anim="services">
+        <div class="overflow-hidden aspect-[4/3]">
+          <img 
+            src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=600&q=80" 
+            alt="Relaxing hair treatment with warm oil being applied to healthy, shining hair" 
+            class="card-img w-full h-full object-cover"
+            loading="lazy" width="600" height="450"
+          >
+        </div>
+        <div class="p-6">
+          <div class="flex items-center gap-2 mb-2">
+            <svg class="text-sage-600" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <h3 class="font-heading text-xl font-semibold text-forest">Ayurvedic Scalp Ritual</h3>
+          </div>
+          <p class="font-body text-sm text-bark-600 leading-relaxed mb-3">
+            Warm herbal oil infusions, marma-point scalp massage, and customized packs of amla, brahmi, and bhringraj. Deep healing from root to tip.
+          </p>
+          <p class="font-body text-sm font-semibold text-terra-600">Starting ₹2,200</p>
+        </div>
+      </div>
+      
+      <!-- Card 4: Bridal Rituals -->
+      <div class="service-card anim-hidden stagger-4 bg-cream-50 rounded-2xl overflow-hidden shadow-sm" data-anim="services">
+        <div class="overflow-hidden aspect-[4/3]">
+          <img 
+            src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=600&q=80" 
+            alt="Bride getting natural, bohemian-style wedding hair with fresh flowers woven in" 
+            class="card-img w-full h-full object-cover"
+            loading="lazy" width="600" height="450"
+          >
+        </div>
+        <div class="p-6">
+          <div class="flex items-center gap-2 mb-2">
+            <svg class="text-sage-600" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            <h3 class="font-heading text-xl font-semibold text-forest">Bohemian Bridal Rituals</h3>
+          </div>
+          <p class="font-body text-sm text-bark-600 leading-relaxed mb-3">
+            Effortless beauty for your day. Fresh flowers, textured waves, and natural glow. Includes trial session and a calming pre-ceremony hair ritual.
+          </p>
+          <p class="font-body text-sm font-semibold text-terra-600">Starting ₹8,500</p>
+        </div>
+      </div>
+      
+      <!-- Card 5: Curl Revival -->
+      <div class="service-card anim-hidden stagger-5 bg-cream-50 rounded-2xl overflow-hidden shadow-sm" data-anim="services">
+        <div class="overflow-hidden aspect-[4/3]">
+          <img 
+            src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&q=80" 
+            alt="Natural curly hair being styled with care, showcasing healthy, bouncy curls" 
+            class="card-img w-full h-full object-cover"
+            loading="lazy" width="600" height="450"
+          >
+        </div>
+        <div class="p-6">
+          <div class="flex items-center gap-2 mb-2">
+            <svg class="text-sage-600" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            <h3 class="font-heading text-xl font-semibold text-forest">Natural Curl Revival</h3>
+          </div>
+          <p class="font-body text-sm text-bark-600 leading-relaxed mb-3">
+            Embrace your natural texture. Specialized cuts for curly, coily, and wavy hair using the Curly Girl method with our botanical styling range.
+          </p>
+          <p class="font-body text-sm font-semibold text-terra-600">Starting ₹3,000</p>
+        </div>
+      </div>
+      
+      <!-- Card 6: Deep Repair (Hidden on smaller screens, shows on lg) -->
+      <div class="service-card anim-hidden stagger-6 bg-cream-50 rounded-2xl overflow-hidden shadow-sm sm:col-span-2 lg:col-span-1" data-anim="services">
+        <div class="overflow-hidden aspect-[4/3]">
+          <img 
+            src="https://images.unsplash.com/photo-1582095133179-bfd08e2fc6b3?w=600&q=80" 
+            alt="Deeply nourishing hair treatment with natural oils being gently massaged in" 
+            class="card-img w-full h-full object-cover"
+            loading="lazy" width="600" height="450"
+          >
+        </div>
+        <div class="p-6">
+          <div class="flex items-center gap-2 mb-2">
+            <svg class="text-sage-600" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <h3 class="font-heading text-xl font-semibold text-forest">Deep Botanical Repair</h3>
+          </div>
+          <p class="font-body text-sm text-bark-600 leading-relaxed mb-3">
+            Intensive plant-protein treatments for damaged hair. Cold-pressed oils, keratin-rich botanicals, and steam therapy to rebuild strength naturally.
+          </p>
+          <p class="font-body text-sm font-semibold text-terra-600">Starting ₹3,200</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!-- TEAM SECTION -->
+<!-- ============================================ -->
+<section id="team" class="py-16 md:py-24 bg-cream-100" aria-label="Our Team">
+  <div class="max-w-6xl mx-auto px-6">
+    <!-- Section Header -->
+    <div class="text-center mb-14 anim-hidden" data-anim="team-header">
+      <p class="eyebrow-text font-body text-xs uppercase tracking-[0.15em] text-terra-500 font-semibold mb-3">The Botanical Artists</p>
+      <h2 class="font-heading text-3xl md:text-4xl font-bold text-forest mb-4">Meet Your Guides</h2>
+      <div class="mx-auto h-0.5 bg-terra-400 divider-line"></div>
+      <p class="font-body text-bark-600 mt-5 max-w-xl mx-auto leading-relaxed">
+        Three herbalists, stylists, and storytellers — united by their love for natural beauty and the plants that make it possible.
+      </p>
+    </div>
+    
+    <!-- Team Grid -->
+    <div class="grid md:grid-cols-3 gap-8">
+      
+      <!-- Stylist 1: Aria -->
+      <div class="team-card anim-hidden stagger-1 bg-white rounded-2xl overflow-hidden shadow-sm" data-anim="team">
+        <div class="overflow-hidden aspect-[3/4]">
+          <img 
+            src="https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=600&q=80" 
+            alt="Portrait of Aria Sharma, botanical colorist, smiling warmly with plants in the background" 
+            class="team-img w-full h-full object-cover"
+            loading="lazy" width="600" height="800"
+          >
+        </div>
+        <div class="p-6">
+          <p class="font-body text-xs uppercase tracking-wider text-terra-500 font-semibold mb-1">Botanical Colorist</p>
+          <h3 class="font-heading text-2xl font-bold text-forest mb-2">Aria Sharma</h3>
+          <p class="font-body text-sm text-bark-600 leading-relaxed mb-3">
+            After training with Morocco's master henna artists and 10 years at top Mumbai salons, Aria creates living color using only plants. Her custom henna blends are mixed fresh for every client — no two shades are alike.
+          </p>
+          <a href="https://instagram.com/aria.botanicalcolor" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-sage-600 hover:text-sage-800 text-sm font-medium transition-colors" aria-label="Aria Sharma on Instagram">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            @aria.botanicalcolor
+          </a>
+        </div>
+      </div>
+      
+      <!-- Stylist 2: Luna -->
+      <div class="team-card anim-hidden stagger-2 bg-white rounded-2xl overflow-hidden shadow-sm" data-anim="team">
+        <div class="overflow-hidden aspect-[3/4]">
+          <img 
+            src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=600&q=80" 
+            alt="Portrait of Luna Iyer, texture specialist, with natural lighting highlighting her features" 
+            class="team-img w-full h-full object-cover"
+            loading="lazy" width="600" height="800"
+          >
+        </div>
+        <div class="p-6">
+          <p class="font-body text-xs uppercase tracking-wider text-terra-500 font-semibold mb-1">Texture & Cut Specialist</p>
+          <h3 class="font-heading text-2xl font-bold text-forest mb-2">Luna Iyer</h3>
+          <p class="font-body text-sm text-bark-600 leading-relaxed mb-3">
+            Trained at the Vidal Sassoon Academy London and certified in the Curly Girl Method, Luna celebrates natural texture. She specializes in cuts that let curls, waves, and coils live their fullest expression.
+          </p>
+          <a href="https://instagram.com/luna.naturalcuts" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-sage-600 hover:text-sage-800 text-sm font-medium transition-colors" aria-label="Luna Iyer on Instagram">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            @luna.naturalcuts
+          </a>
+        </div>
+      </div>
+      
+      <!-- Stylist 3: Maya -->
+      <div class="team-card anim-hidden stagger-3 bg-white rounded-2xl overflow-hidden shadow-sm" data-anim="team">
+        <div class="overflow-hidden aspect-[3/4]">
+          <img 
+            src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=600&q=80" 
+            alt="Portrait of Maya Kapoor, Ayurvedic hair wellness specialist, in a serene expression" 
+            class="team-img w-full h-full object-cover"
+            loading="lazy" width="600" height="800"
+          >
+        </div>
+        <div class="p-6">
+          <p class="font-body text-xs uppercase tracking-wider text-terra-500 font-semibold mb-1">Ayurvedic Wellness Specialist</p>
+          <h3 class="font-heading text-2xl font-bold text-forest mb-2">Maya Kapoor</h3>
+          <p class="font-body text-sm text-bark-600 leading-relaxed mb-3">
+            A certified trichologist with deep Ayurvedic training from Kerala, Maya bridges ancient herbal wisdom with modern hair science. She spent three years in Tokyo studying Japanese deep-conditioning techniques.
+          </p>
+          <a href="https://instagram.com/maya.hairwellness" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-sage-600 hover:text-sage-800 text-sm font-medium transition-colors" aria-label="Maya Kapoor on Instagram">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            @maya.hairwellness
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!-- NATURAL INGREDIENTS SECTION -->
+<!-- ============================================ -->
+<section id="ingredients" class="py-16 md:py-24 bg-forest text-white" aria-label="Our Natural Ingredients">
+  <div class="max-w-6xl mx-auto px-6">
+    <!-- Section Header -->
+    <div class="text-center mb-14 anim-hidden" data-anim="ingredients-header">
+      <p class="eyebrow-text font-body text-xs uppercase tracking-[0.15em] text-terra-400 font-semibold mb-3">From Earth to Hair</p>
+      <h2 class="font-heading text-3xl md:text-4xl font-bold text-cream-100 mb-4">Nature's Apothecary</h2>
+      <div class="mx-auto h-0.5 bg-terra-400 divider-line"></div>
+      <p class="font-body text-cream-300 mt-5 max-w-xl mx-auto leading-relaxed">
+        Every formula in our studio is crafted from these time-tested botanicals — sourced directly from organic farms across India.
+      </p>
+    </div>
+    
+    <!-- Ingredients Grid -->
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      
+      <!-- Ingredient 1: Amla -->
+      <div class="ingredient-card anim-hidden stagger-1 bg-forest-light rounded-xl p-6 text-center" data-anim="ingredients">
+        <div class="w-20 h-20 mx-auto mb-4 rounded-full overflow-hidden border-2 border-sage-400/30">
+          <img 
+            src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=200&q=80" 
+            alt="Fresh green amla (Indian gooseberry) fruits on a branch" 
+            class="w-full h-full object-cover"
+            loading="lazy" width="200" height="200"
+          >
+        </div>
+        <h3 class="font-heading text-xl font-semibold text-cream-100 mb-2">Amla</h3>
+        <p class="font-body text-sm text-cream-400 leading-relaxed">Rich in Vitamin C, amla strengthens follicles, prevents premature graying, and adds natural shine.</p>
+      </div>
+      
+      <!-- Ingredient 2: Bhringraj -->
+      <div class="ingredient-card anim-hidden stagger-2 bg-forest-light rounded-xl p-6 text-center" data-anim="ingredients">
+        <div class="w-20 h-20 mx-auto mb-4 rounded-full overflow-hidden border-2 border-sage-400/30">
+          <img 
+            src="https://images.unsplash.com/photo-1515586000433-45406d8e6662?w=200&q=80" 
+            alt="Small white flowering bhringraj herb used in Ayurvedic medicine" 
+            class="w-full h-full object-cover"
+            loading="lazy" width="200" height="200"
+          >
+        </div>
+        <h3 class="font-heading text-xl font-semibold text-cream-100 mb-2">Bhringraj</h3>
+        <p class="font-body text-sm text-cream-400 leading-relaxed">The "King of Herbs" for hair. Promotes growth, reduces hair fall, and deeply nourishes the scalp.</p>
+      </div>
+      
+      <!-- Ingredient 3: Hibiscus -->
+      <div class="ingredient-card anim-hidden stagger-3 bg-forest-light rounded-xl p-6 text-center" data-anim="ingredients">
+        <div class="w-20 h-20 mx-auto mb-4 rounded-full overflow-hidden border-2 border-sage-400/30">
+          <img 
+            src="https://images.unsplash.com/photo-1592919505780-303950717480?w=200&q=80" 
+            alt="Vibrant red hibiscus flower, nature's conditioner for hair" 
+            class="w-full h-full object-cover"
+            loading="lazy" width="200" height="200"
+          >
+        </div>
+        <h3 class="font-heading text-xl font-semibold text-cream-100 mb-2">Hibiscus</h3>
+        <p class="font-body text-sm text-cream-400 leading-relaxed">Nature's conditioner. Rich in amino acids that smooth cuticles, reduce frizz, and add brilliant luster.</p>
+      </div>
+      
+      <!-- Ingredient 4: Coconut Oil -->
+      <div class="ingredient-card anim-hidden stagger-4 bg-forest-light rounded-xl p-6 text-center" data-anim="ingredients">
+        <div class="w-20 h-20 mx-auto mb-4 rounded-full overflow-hidden border-2 border-sage-400/30">
+          <img 
+            src="https://images.unsplash.com/photo-1621939514649-280e2ee25f60?w=200&q=80" 
+            alt="Virgin coconut oil in a glass jar with fresh coconut pieces" 
+            class="w-full h-full object-cover"
+            loading="lazy" width="200" height="200"
+          >
+        </div>
+        <h3 class="font-heading text-xl font-semibold text-cream-100 mb-2">Virgin Coconut Oil</h3>
+        <p class="font-body text-sm text-cream-400 leading-relaxed">Cold-pressed from Kerala coconuts. Penetrates deep into hair shaft, repairs damage, and prevents protein loss.</p>
+      </div>
+      
+      <!-- Ingredient 5: Henna -->
+      <div class="ingredient-card anim-hidden stagger-5 bg-forest-light rounded-xl p-6 text-center" data-anim="ingredients">
+        <div class="w-20 h-20 mx-auto mb-4 rounded-full overflow-hidden border-2 border-sage-400/30">
+          <img 
+            src="https://images.unsplash.com/photo-1573646609328-01f50a125660?w=200&q=80" 
+            alt="Henna powder with fresh green leaves, a natural hair coloring agent" 
+            class="w-full h-full object-cover"
+            loading="lazy" width="200" height="200"
+          >
+        </div>
+        <h3 class="font-heading text-xl font-semibold text-cream-100 mb-2">Rajasthani Henna</h3>
+        <p class="font-body text-sm text-cream-400 leading-relaxed">Triple-sifted, body-art quality henna from Sojat. Colors while conditioning, leaving hair stronger than before.</p>
+      </div>
+      
+      <!-- Ingredient 6: Brahmi -->
+      <div class="ingredient-card anim-hidden stagger-6 bg-forest-light rounded-xl p-6 text-center" data-anim="ingredients">
+        <div class="w-20 h-20 mx-auto mb-4 rounded-full overflow-hidden border-2 border-sage-400/30">
+          <img 
+            src="https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?w=200&q=80" 
+            alt="Fresh green brahmi leaves, a traditional Ayurvedic herb" 
+            class="w-full h-full object-cover"
+            loading="lazy" width="200" height="200"
+          >
+        </div>
+        <h3 class="font-heading text-xl font-semibold text-cream-100 mb-2">Brahmi</h3>
+        <p class="font-body text-sm text-cream-400 leading-relaxed">Calms the scalp, nourishes roots, and thickens each strand. A staple of our deep-treatment rituals.</p>
+      </div>
+      
+      <!-- Ingredient 7: Neem -->
+      <div class="ingredient-card anim-hidden stagger-7 bg-forest-light rounded-xl p-6 text-center" data-anim="ingredients">
+        <div class="w-20 h-20 mx-auto mb-4 rounded-full overflow-hidden border-2 border-sage-400/30">
+          <img 
+            src="https://images.unsplash.com/photo-1628556270448-4d4e4148e1b1?w=200&q=80" 
+            alt="Fresh green neem leaves, known for scalp purifying properties" 
+            class="w-full h-full object-cover"
+            loading="lazy" width="200" height="200"
+          >
+        </div>
+        <h3 class="font-heading text-xl font-semibold text-cream-100 mb-2">Neem</h3>
+        <p class="font-body text-sm text-cream-400 leading-relaxed">Nature's purifier. Anti-fungal and anti-bacterial, neem clears scalp buildup and restores a healthy foundation.</p>
+      </div>
+      
+      <!-- Ingredient 8: Shikakai -->
+      <div class="ingredient-card anim-hidden stagger-8 bg-forest-light rounded-xl p-6 text-center" data-anim="ingredients">
+        <div class="w-20 h-20 mx-auto mb-4 rounded-full overflow-hidden border-2 border-sage-400/30">
+          <img 
+            src="https://images.unsplash.com/photo-1587593810167-a84920ea0781?w=200&q=80" 
+            alt="Dried shikakai pods, a gentle natural cleanser for hair" 
+            class="w-full h-full object-cover"
+            loading="lazy" width="200" height="200"
+          >
+        </div>
+        <h3 class="font-heading text-xl font-semibold text-cream-100 mb-2">Shikakai</h3>
+        <p class="font-body text-sm text-cream-400 leading-relaxed">The gentlest natural cleanser. Washes without stripping oils, detangles naturally, and leaves hair soft as silk.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!-- TESTIMONIALS SECTION -->
+<!-- ============================================ -->
+<section id="testimonials" class="py-16 md:py-24 bg-cream-50" aria-label="Client Stories">
+  <div class="max-w-6xl mx-auto px-6">
+    <!-- Section Header -->
+    <div class="text-center mb-14 anim-hidden" data-anim="testimonials-header">
+      <p class="eyebrow-text font-body text-xs uppercase tracking-[0.15em] text-terra-500 font-semibold mb-3">Client Stories</p>
+      <h2 class="font-heading text-3xl md:text-4xl font-bold text-forest mb-4">Words from Our Garden</h2>
+      <div class="mx-auto h-0.5 bg-terra-400 divider-line"></div>
+    </div>
+    
+    <!-- Testimonials Grid -->
+    <div class="grid md:grid-cols-3 gap-8">
+      
+      <!-- Testimonial 1 -->
+      <div class="testimonial-card anim-hidden stagger-1 bg-white rounded-2xl p-8 shadow-sm relative" data-anim="testimonials">
+        <!-- Leaf accent -->
+        <div class="absolute top-4 right-4 text-sage-200 opacity-50">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66.95-2.3c.48.17.98.3 1.34.3C19 20 22 3 22 3c-1 2-8 2.25-13 3.25S2 11.5 2 13.5s1.75 3.75 1.75 3.75C7 8 17 8 17 8z"/></svg>
+        </div>
+        
+        <!-- Quote -->
+        <div class="font-heading text-5xl text-sage-300 leading-none mb-3 opacity-40">"</div>
+        <blockquote class="font-body text-bark-700 leading-relaxed mb-6">
+          Aria created a custom henna blend that turned my graying hair into the most beautiful auburn I've ever had. Five months later, my hair is stronger than before the coloring. This is what natural should feel like.
+        </blockquote>
+        
+        <!-- Author -->
+        <div class="flex items-center gap-3">
+          <img 
+            src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&q=80" 
+            alt="Priya Desai" 
+            class="w-12 h-12 rounded-full object-cover"
+            loading="lazy" width="100" height="100"
+          >
+          <div>
+            <p class="font-body text-sm font-semibold text-forest">Priya Desai</p>
+            <p class="font-body text-xs text-bark-500">Architect, Studio Pod Mumbai</p>
+          </div>
+          <div class="ml-auto flex gap-0.5">
+            <svg class="text-terra-400" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg class="text-terra-400" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg class="text-terra-400" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg class="text-terra-400" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg class="text-terra-400" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Testimonial 2 -->
+      <div class="testimonial-card anim-hidden stagger-2 bg-white rounded-2xl p-8 shadow-sm relative md:translate-y-6" data-anim="testimonials">
+        <div class="absolute top-4 right-4 text-sage-200 opacity-50">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66.95-2.3c.48.17.98.3 1.34.3C19 20 22 3 22 3c-1 2-8 2.25-13 3.25S2 11.5 2 13.5s1.75 3.75 1.75 3.75C7 8 17 8 17 8z"/></svg>
+        </div>
+        <div class="font-heading text-5xl text-sage-300 leading-none mb-3 opacity-40">"</div>
+        <blockquote class="font-body text-bark-700 leading-relaxed mb-6">
+          After years of chemical straightening, my curls were lifeless. Maya's Ayurvedic scalp treatments and Luna's curl-specific cuts gave me my hair back. I literally cried the first time I saw my natural curls bounce again.
+        </blockquote>
+        <div class="flex items-center gap-3">
+          <img 
+            src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100&q=80" 
+            alt="Kavya Nair" 
+            class="w-12 h-12 rounded-full object-cover"
+            loading="lazy" width="100" height="100"
+          >
+          <div>
+            <p class="font-body text-sm font-semibold text-forest">Kavya Nair</p>
+            <p class="font-body text-xs text-bark-500">Yoga Instructor, Bandra</p>
+          </div>
+          <div class="ml-auto flex gap-0.5">
+            <svg class="text-terra-400" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg class="text-terra-400" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg class="text-terra-400" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg class="text-terra-400" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg class="text-terra-400" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Testimonial 3 -->
+      <div class="testimonial-card anim-hidden stagger-3 bg-white rounded-2xl p-8 shadow-sm relative" data-anim="testimonials">
+        <div class="absolute top-4 right-4 text-sage-200 opacity-50">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66.95-2.3c.48.17.98.3 1.34.3C19 20 22 3 22 3c-1 2-8 2.25-13 3.25S2 11.5 2 13.5s1.75 3.75 1.75 3.75C7 8 17 8 17 8z"/></svg>
+        </div>
+        <div class="font-heading text-5xl text-sage-300 leading-none mb-3 opacity-40">"</div>
+        <blockquote class="font-body text-bark-700 leading-relaxed mb-6">
+          My boho wedding hair by Aria was everything — fresh jasmine, loose waves, absolutely effortless. But what moved me was the calming pre-ceremony head massage. I walked down the aisle feeling genuinely peaceful.
+        </blockquote>
+        <div class="flex items-center gap-3">
+          <img 
+            src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&q=80" 
+            alt="Zara Malik" 
+            class="w-12 h-12 rounded-full object-cover"
+            loading="lazy" width="100" height="100"
+          >
+          <div>
+            <p class="font-body text-sm font-semibold text-forest">Zara Malik</p>
+            <p class="font-body text-xs text-bark-500">Ceramicist, Kala Ghoda</p>
+          </div>
+          <div class="ml-auto flex gap-0.5">
+            <svg class="text-terra-400" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg class="text-terra-400" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg class="text-terra-400" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg class="text-terra-400" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg class="text-terra-400" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!-- BOOKING SECTION -->
+<!-- ============================================ -->
+<section id="booking" class="py-16 md:py-24 bg-white" aria-label="Book an Appointment">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="grid md:grid-cols-2 gap-12 items-start">
+      
+      <!-- Booking Form -->
+      <div class="anim-hidden anim-slide-left" data-anim="booking">
+        <p class="eyebrow-text font-body text-xs uppercase tracking-[0.15em] text-terra-500 font-semibold mb-3">Your Ritual Awaits</p>
+        <h2 class="font-heading text-3xl md:text-4xl font-bold text-forest mb-3">Begin Your Journey</h2>
+        <div class="w-0 h-0.5 bg-terra-400 mb-5 divider-line"></div>
+        <p class="font-body text-bark-600 mb-8 leading-relaxed">
+          Book a complimentary 15-minute botanical consultation, or schedule your service directly. We'll match you with the perfect guide for your hair's needs.
+        </p>
+        
+        <form id="booking-form" class="space-y-5" novalidate>
+          <!-- Name -->
+          <div class="anim-hidden stagger-1" data-anim="form-fields">
+            <label for="name" class="block font-body text-sm font-medium text-bark-700 mb-1.5">Full Name <span class="text-terra-500">*</span></label>
+            <input 
+              type="text" id="name" name="name" required 
+              class="form-input w-full px-4 py-3 border border-bark-200 rounded-lg font-body text-bark-800 bg-cream-50 placeholder:text-bark-400"
+              placeholder="Your full name"
+              aria-required="true"
+            >
+          </div>
+          
+          <!-- Email -->
+          <div class="anim-hidden stagger-2" data-anim="form-fields">
+            <label for="email" class="block font-body text-sm font-medium text-bark-700 mb-1.5">Email <span class="text-terra-500">*</span></label>
+            <input 
+              type="email" id="email" name="email" required 
+              class="form-input w-full px-4 py-3 border border-bark-200 rounded-lg font-body text-bark-800 bg-cream-50 placeholder:text-bark-400"
+              placeholder="you@example.com"
+              aria-required="true"
+            >
+          </div>
+          
+          <!-- Phone -->
+          <div class="anim-hidden stagger-3" data-anim="form-fields">
+            <label for="phone" class="block font-body text-sm font-medium text-bark-700 mb-1.5">Phone <span class="text-terra-500">*</span></label>
+            <div class="flex">
+              <span class="inline-flex items-center px-3 py-3 border border-r-0 border-bark-200 rounded-l-lg bg-cream-100 font-body text-sm text-bark-600">+91</span>
+              <input 
+                type="tel" id="phone" name="phone" required 
+                class="form-input w-full px-4 py-3 border border-bark-200 rounded-r-lg font-body text-bark-800 bg-cream-50 placeholder:text-bark-400"
+                placeholder="98765 43210"
+                pattern="[0-9]{10}"
+                aria-required="true"
+              >
+            </div>
+          </div>
+          
+          <!-- Stylist -->
+          <div class="anim-hidden stagger-4" data-anim="form-fields">
+            <label for="stylist" class="block font-body text-sm font-medium text-bark-700 mb-1.5">Preferred Guide</label>
+            <select id="stylist" name="stylist" class="form-input w-full px-4 py-3 border border-bark-200 rounded-lg font-body text-bark-800 bg-cream-50">
+              <option value="">No preference</option>
+              <option value="aria">Aria Sharma — Botanical Colorist</option>
+              <option value="luna">Luna Iyer — Texture Specialist</option>
+              <option value="maya">Maya Kapoor — Ayurvedic Wellness</option>
+            </select>
+          </div>
+          
+          <!-- Service -->
+          <div class="anim-hidden stagger-5" data-anim="form-fields">
+            <label for="service" class="block font-body text-sm font-medium text-bark-700 mb-1.5">Service Interest</label>
+            <select id="service" name="service" class="form-input w-full px-4 py-3 border border-bark-200 rounded-lg font-body text-bark-800 bg-cream-50">
+              <option value="">Select a ritual</option>
+              <option value="cut">Botanical Cut & Shape</option>
+              <option value="color">Plant-Dye Coloring</option>
+              <option value="scalp">Ayurvedic Scalp Ritual</option>
+              <option value="bridal">Bohemian Bridal Rituals</option>
+              <option value="curls">Natural Curl Revival</option>
+              <option value="repair">Deep Botanical Repair</option>
+              <option value="consultation">Free Consultation Only</option>
+            </select>
+          </div>
+          
+          <!-- Date -->
+          <div class="anim-hidden stagger-6" data-anim="form-fields">
+            <label for="date" class="block font-body text-sm font-medium text-bark-700 mb-1.5">Preferred Date</label>
+            <input 
+              type="date" id="date" name="date"
+              class="form-input w-full px-4 py-3 border border-bark-200 rounded-lg font-body text-bark-800 bg-cream-50"
+            >
+          </div>
+          
+          <!-- Message -->
+          <div class="anim-hidden stagger-7" data-anim="form-fields">
+            <label for="message" class="block font-body text-sm font-medium text-bark-700 mb-1.5">Tell Us About Your Hair</label>
+            <textarea 
+              id="message" name="message" rows="3"
+              class="form-input w-full px-4 py-3 border border-bark-200 rounded-lg font-body text-bark-800 bg-cream-50 placeholder:text-bark-400 resize-none"
+              placeholder="Hair history, concerns, goals, or anything you'd like us to know..."
+            ></textarea>
+          </div>
+          
+          <!-- Submit -->
+          <div class="anim-hidden stagger-8" data-anim="form-fields">
+            <button 
+              type="submit" 
+              class="w-full md:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-sage-600 text-white font-body text-sm font-semibold rounded-full hover:bg-sage-700 active:scale-[0.98] transition-all duration-200 shadow-lg shadow-sage-600/20"
+              aria-label="Send booking request via WhatsApp"
+            >
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              Book via WhatsApp
+            </button>
+          </div>
+        </form>
+        
+        <!-- Success State (Hidden by default) -->
+        <div id="booking-success" class="hidden text-center py-10">
+          <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-sage-100 mb-4">
+            <svg class="text-sage-600" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <h3 class="font-heading text-2xl font-bold text-forest mb-2">Message Sent!</h3>
+          <p class="font-body text-bark-600 mb-2" id="success-message">Thank you. We'll confirm your appointment within 2 hours.</p>
+          <p class="font-body text-sm text-bark-500">Or call us directly: <a href="tel:+912226005678" class="text-sage-700 font-medium hover:underline">+91 22 2600 5678</a></p>
+        </div>
+      </div>
+      
+      <!-- Booking Image -->
+      <div class="anim-hidden anim-slide-right relative" data-anim="booking">
+        <img 
+          src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=800&q=80" 
+          alt="Warm, sunlit salon interior with wooden accents, potted plants, and soft natural lighting" 
+          class="w-full rounded-2xl shadow-lg"
+          loading="lazy" width="800" height="1000"
+        >
+        <!-- Info overlay -->
+        <div class="absolute bottom-6 left-6 right-6 bg-white/90 backdrop-blur-sm rounded-xl p-5 shadow-lg">
+          <div class="flex items-start gap-4">
+            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-sage-100 flex items-center justify-center">
+              <svg class="text-sage-700" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div>
+              <p class="font-body text-sm font-semibold text-forest">Studio Hours</p>
+              <p class="font-body text-xs text-bark-600">Tue – Sun: 10:00 AM – 7:30 PM</p>
+              <p class="font-body text-xs text-bark-500">Monday: Rest Day (for us and the plants)</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4 mt-3 pt-3 border-t border-sage-100">
+            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-terra-100 flex items-center justify-center">
+              <svg class="text-terra-600" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <p class="font-body text-sm font-semibold text-forest">Find Us</p>
+              <p class="font-body text-xs text-bark-600">18 Chapel Road, Bandra West, Mumbai 400050</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!-- FINAL CTA SECTION -->
+<!-- ============================================ -->
+<section class="py-16 md:py-24 bg-sage-600 relative overflow-hidden" aria-label="Call to action">
+  <!-- Background pattern -->
+  <div class="absolute inset-0 opacity-10">
+    <svg class="w-full h-full" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <pattern id="leaf-pattern" x="0" y="0" width="80" height="80" patternUnits="userSpaceOnUse">
+          <path d="M40 10C40 10 60 30 60 50C60 70 40 70 40 70C40 70 20 70 20 50C20 30 40 10 40 10Z" fill="white" opacity="0.3"/>
+        </pattern>
+      </defs>
+      <rect width="400" height="400" fill="url(#leaf-pattern)"/>
+    </svg>
+  </div>
+  
+  <div class="relative z-10 max-w-3xl mx-auto px-6 text-center anim-hidden" data-anim="cta">
+    <h2 class="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
+      Your Hair Deserves<br>Better Than Chemicals
+    </h2>
+    <p class="font-body text-sage-100 text-lg mb-8 max-w-xl mx-auto leading-relaxed">
+      Join 2,000+ clients who've made the switch to plant-powered hair care. Your first botanical consultation is complimentary.
+    </p>
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+      <a href="#booking" class="inline-flex items-center gap-2 px-8 py-3.5 bg-terra-500 text-white font-body text-sm font-semibold rounded-full hover:bg-terra-600 transition-colors duration-200 shadow-lg">
+        Book Your Free Consultation
+      </a>
+      <a href="tel:+912226005678" class="inline-flex items-center gap-2 px-6 py-3 border-2 border-white/30 text-white font-body text-sm font-semibold rounded-full hover:bg-white/10 transition-colors duration-200">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Call Us
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================================ -->
+<!-- FOOTER -->
+<!-- ============================================ -->
+<footer class="bg-bark-950 text-cream-300 py-14" role="contentinfo">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="grid md:grid-cols-4 gap-10 mb-10">
+      
+      <!-- Brand Column -->
+      <div class="md:col-span-1">
+        <a href="#" class="inline-block mb-4" aria-label="Sage & Botanicals home">
+          <span class="font-heading text-xl font-bold text-sage-400">Sage & Botanicals</span><br>
+          <span class="font-body text-[10px] uppercase tracking-[0.12em] text-cream-500">Hair Studio</span>
+        </a>
+        <p class="font-body text-sm text-cream-500 leading-relaxed mb-3">
+          18 Chapel Road, Bandra West,<br>Mumbai 400050, Maharashtra
+        </p>
+        <p class="font-body text-sm text-cream-500">
+          <a href="tel:+912226005678" class="hover:text-sage-400 transition-colors">+91 22 2600 5678</a>
+        </p>
+        <p class="font-body text-sm text-cream-500 mt-1">
+          Tue – Sun: 10:00 AM – 7:30 PM
+        </p>
+      </div>
+      
+      <!-- Quick Links -->
+      <div>
+        <h4 class="font-body text-sm font-semibold text-cream-200 uppercase tracking-wider mb-4">Explore</h4>
+        <ul class="space-y-2.5">
+          <li><a href="#services" class="font-body text-sm text-cream-500 hover:text-sage-400 transition-colors">Our Rituals</a></li>
+          <li><a href="#team" class="font-body text-sm text-cream-500 hover:text-sage-400 transition-colors">Botanical Artists</a></li>
+          <li><a href="#ingredients" class="font-body text-sm text-cream-500 hover:text-sage-400 transition-colors">Our Ingredients</a></li>
+          <li><a href="#testimonials" class="font-body text-sm text-cream-500 hover:text-sage-400 transition-colors">Client Stories</a></li>
+          <li><a href="#booking" class="font-body text-sm text-cream-500 hover:text-sage-400 transition-colors">Book Now</a></li>
+        </ul>
+      </div>
+      
+      <!-- Connect -->
+      <div>
+        <h4 class="font-body text-sm font-semibold text-cream-200 uppercase tracking-wider mb-4">Connect</h4>
+        <div class="flex items-center gap-3 mb-4">
+          <a href="https://instagram.com/sageandbotanicals" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-bark-800 flex items-center justify-center hover:bg-sage-700 transition-colors" aria-label="Instagram">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="https://pinterest.com/sageandbotanicals" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-bark-800 flex items-center justify-center hover:bg-sage-700 transition-colors" aria-label="Pinterest">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 01.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
+          </a>
+          <a href="https://facebook.com/sageandbotanicals" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-bark-800 flex items-center justify-center hover:bg-sage-700 transition-colors" aria-label="Facebook">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+        </div>
+        <p class="font-body text-sm text-cream-500">
+          <a href="mailto:hello@sageandbotanicals.in" class="hover:text-sage-400 transition-colors">hello@sageandbotanicals.in</a>
+        </p>
+      </div>
+      
+      <!-- Newsletter -->
+      <div>
+        <h4 class="font-body text-sm font-semibold text-cream-200 uppercase tracking-wider mb-4">Botanical Tips</h4>
+        <p class="font-body text-sm text-cream-500 mb-3">Monthly hair wisdom, seasonal rituals, and exclusive offers from our garden.</p>
+        <form class="flex" onsubmit="event.preventDefault(); this.innerHTML='<p class=\'font-body text-sm text-sage-400 py-2\'>Welcome to our garden! 🌿</p>'; return false;">
+          <input 
+            type="email" 
+            placeholder="Your email" 
+            class="flex-1 px-3 py-2 bg-bark-800 border border-bark-700 rounded-l-lg font-body text-sm text-cream-200 placeholder:text-cream-600 focus:outline-none focus:border-sage-600"
+            aria-label="Email for newsletter"
+            required
+          >
+          <button type="submit" class="px-4 py-2 bg-sage-600 text-white font-body text-sm font-semibold rounded-r-lg hover:bg-sage-700 transition-colors" aria-label="Subscribe to newsletter">
+            Join
+          </button>
+        </form>
+      </div>
+    </div>
+    
+    <!-- Bottom bar -->
+    <div class="border-t border-bark-800 pt-6 flex flex-col md:flex-row items-center justify-between gap-3">
+      <p class="font-body text-xs text-cream-600">© 2026 Sage & Botanicals Hair Studio. All rights reserved.</p>
+      <div class="flex items-center gap-4">
+        <a href="#" class="font-body text-xs text-cream-600 hover:text-cream-400 transition-colors">Privacy Policy</a>
+        <a href="#" class="font-body text-xs text-cream-600 hover:text-cream-400 transition-colors">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================ -->
+<!-- FLOATING CTA BUTTON -->
+<!-- ============================================ -->
+<div id="floating-cta" class="fixed bottom-6 right-6 z-50 opacity-0 translate-y-4 transition-all duration-500" style="pointer-events: none;" aria-hidden="true">
+  <!-- Pulse ring -->
+  <div class="absolute inset-0 rounded-full bg-sage-500 animate-pulse-ring"></div>
+  <!-- Button -->
+  <a 
+    href="#booking"
+    class="float-cta relative flex items-center justify-center w-14 h-14 bg-sage-600 text-white rounded-full shadow-lg shadow-sage-600/30 hover:bg-sage-700 transition-colors z-10"
+    aria-label="Book an appointment"
+    style="width: 56px;"
+  >
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" class="flex-shrink-0"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    <span class="cta-text ml-2 font-body text-sm font-semibold">Book Now</span>
+  </a>
+</div>
+
+<!-- ============================================ -->
+<!-- JAVASCRIPT -->
+<!-- ============================================ -->
+<script>
+(function() {
+  'use strict';
+  
+  // =====================
+  // 1. Scroll Animations (IntersectionObserver)
+  // =====================
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  
+  if (!prefersReducedMotion) {
+    const animElements = document.querySelectorAll('.anim-hidden');
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('anim-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.1,
+      rootMargin: '-60px 0px'
+    });
+    
+    animElements.forEach(el => observer.observe(el));
+    
+    // Auto-trigger hero animations immediately
+    setTimeout(() => {
+      document.querySelectorAll('[data-anim="hero"]').forEach(el => {
+        el.classList.add('anim-visible');
+      });
+    }, 300);
+  } else {
+    // Immediately show all elements
+    document.querySelectorAll('.anim-hidden').forEach(el => {
+      el.classList.add('anim-visible');
+    });
+  }
+  
+  // =====================
+  // 2. Navigation scroll state
+  // =====================
+  const navbar = document.getElementById('navbar');
+  let lastScroll = 0;
+  
+  function updateNav() {
+    const scrollY = window.scrollY;
+    if (scrollY > 80) {
+      navbar.classList.add('nav-scrolled');
+    } else {
+      navbar.classList.remove('nav-scrolled');
+    }
+    lastScroll = scrollY;
+  }
+  
+  window.addEventListener('scroll', updateNav, { passive: true });
+  updateNav();
+  
+  // =====================
+  // 3. Hero Parallax
+  // =====================
+  if (!prefersReducedMotion) {
+    const heroBg = document.querySelector('.hero-bg');
+    
+    function updateParallax() {
+      const scrollY = window.scrollY;
+      if (scrollY < window.innerHeight * 1.5) {
+        heroBg.style.transform = 'translateY(' + (scrollY * 0.3) + 'px) scale(1.05)';
+      }
+    }
+    
+    window.addEventListener('scroll', updateParallax, { passive: true });
+  }
+  
+  // =====================
+  // 4. Mobile menu
+  // =====================
+  const mobileBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  let menuOpen = false;
+  
+  mobileBtn.addEventListener('click', function() {
+    menuOpen = !menuOpen;
+    mobileMenu.classList.toggle('hidden', !menuOpen);
+    mobileBtn.setAttribute('aria-expanded', menuOpen.toString());
+    
+    const bars = mobileBtn.querySelectorAll('span');
+    if (menuOpen) {
+      bars[0].style.transform = 'rotate(45deg) translateY(6px)';
+      bars[1].style.opacity = '0';
+      bars[2].style.transform = 'rotate(-45deg) translateY(-6px)';
+      bars[2].style.width = '24px';
+    } else {
+      bars[0].style.transform = '';
+      bars[1].style.opacity = '';
+      bars[2].style.transform = '';
+      bars[2].style.width = '';
+    }
+  });
+  
+  // Close menu on link click
+  document.querySelectorAll('.mobile-nav-link').forEach(link => {
+    link.addEventListener('click', function() {
+      menuOpen = false;
+      mobileMenu.classList.add('hidden');
+      mobileBtn.setAttribute('aria-expanded', 'false');
+      const bars = mobileBtn.querySelectorAll('span');
+      bars[0].style.transform = '';
+      bars[1].style.opacity = '';
+      bars[2].style.transform = '';
+      bars[2].style.width = '';
+    });
+  });
+  
+  // =====================
+  // 5. Floating CTA visibility
+  // =====================
+  const floatingCTA = document.getElementById('floating-cta');
+  const heroSection = document.getElementById('hero');
+  const bookingSection = document.getElementById('booking');
+  
+  function updateFloatingCTA() {
+    const scrollY = window.scrollY;
+    const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
+    const bookingTop = bookingSection.offsetTop - window.innerHeight;
+    const bookingBottom = bookingSection.offsetTop + bookingSection.offsetHeight;
+    
+    if (scrollY > heroBottom - 100 && (scrollY < bookingTop || scrollY > bookingBottom)) {
+      floatingCTA.style.opacity = '1';
+      floatingCTA.style.transform = 'translateY(0)';
+      floatingCTA.style.pointerEvents = 'auto';
+      floatingCTA.setAttribute('aria-hidden', 'false');
+    } else {
+      floatingCTA.style.opacity = '0';
+      floatingCTA.style.transform = 'translateY(16px)';
+      floatingCTA.style.pointerEvents = 'none';
+      floatingCTA.setAttribute('aria-hidden', 'true');
+    }
+  }
+  
+  window.addEventListener('scroll', updateFloatingCTA, { passive: true });
+  
+  // =====================
+  // 6. Booking Form → WhatsApp
+  // =====================
+  const bookingForm = document.getElementById('booking-form');
+  const bookingSuccess = document.getElementById('booking-success');
+  
+  // Set min date to tomorrow
+  const dateInput = document.getElementById('date');
+  if (dateInput) {
+    const tomorrow = new Date();
+    tomorrow.setDate(tomorrow.getDate() + 1);
+    dateInput.min = tomorrow.toISOString().split('T')[0];
+  }
+  
+  bookingForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Basic validation
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const stylist = document.getElementById('stylist').value;
+    const service = document.getElementById('service').value;
+    const date = document.getElementById('date').value;
+    const message = document.getElementById('message').value.trim();
+    
+    if (!name || !email || !phone) {
+      // Simple highlight of required fields
+      ['name', 'email', 'phone'].forEach(id => {
+        const el = document.getElementById(id);
+        if (!el.value.trim()) {
+          el.style.borderColor = '#c95524';
+          el.addEventListener('input', function() {
+            el.style.borderColor = '';
+          }, { once: true });
+        }
+      });
+      return;
+    }
+    
+    // Build WhatsApp message
+    const serviceNames = {
+      'cut': 'Botanical Cut & Shape',
+      'color': 'Plant-Dye Coloring',
+      'scalp': 'Ayurvedic Scalp Ritual',
+      'bridal': 'Bohemian Bridal Rituals',
+      'curls': 'Natural Curl Revival',
+      'repair': 'Deep Botanical Repair',
+      'consultation': 'Free Consultation'
+    };
+    
+    const stylistNames = {
+      'aria': 'Aria Sharma',
+      'luna': 'Luna Iyer',
+      'maya': 'Maya Kapoor'
+    };
+    
+    let whatsappMsg = '🌿 *New Booking Request — Sage & Botanicals*\n\n';
+    whatsappMsg += '👤 *Name:* ' + name + '\n';
+    whatsappMsg += '📧 *Email:* ' + email + '\n';
+    whatsappMsg += '📱 *Phone:* +91 ' + phone + '\n';
+    if (service) whatsappMsg += '✨ *Service:* ' + (serviceNames[service] || service) + '\n';
+    if (stylist) whatsappMsg += '🧑‍🎨 *Preferred Guide:* ' + (stylistNames[stylist] || 'No preference') + '\n';
+    if (date) whatsappMsg += '📅 *Preferred Date:* ' + date + '\n';
+    if (message) whatsappMsg += '💬 *Notes:* ' + message + '\n';
+    
+    // WhatsApp number (Indian format)
+    const waNumber = '919876543210'; // Replace with actual salon number
+    const waURL = 'https://wa.me/' + waNumber + '?text=' + encodeURIComponent(whatsappMsg);
+    
+    // Open WhatsApp
+    window.open(waURL, '_blank');
+    
+    // Show success state
+    bookingForm.classList.add('hidden');
+    bookingSuccess.classList.remove('hidden');
+    
+    // Update success message with name
+    document.getElementById('success-message').textContent = 
+      'Thank you, ' + name.split(' ')[0] + '. We\'ve opened WhatsApp for you — send the message to confirm!';
+    
+    // Log for debugging
+    console.log('Booking submitted:', { name, email, phone, stylist, service, date, message });
+  });
+  
+  // =====================
+  // 7. Smooth scroll for anchor links
+  // =====================
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      if (href === '#') return;
+      
+      const target = document.querySelector(href);
+      if (target) {
+        e.preventDefault();
+        const navHeight = navbar.offsetHeight;
+        const targetPosition = target.getBoundingClientRect().top + window.scrollY - navHeight;
+        window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+      }
+    });
+  });
+  
+  // =====================
+  // 8. Divider line animations
+  // =====================
+  if (!prefersReducedMotion) {
+    const dividers = document.querySelectorAll('.divider-line');
+    const dividerObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('anim-visible');
+          dividerObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+    
+    dividers.forEach(d => dividerObserver.observe(d));
+  } else {
+    document.querySelectorAll('.divider-line').forEach(d => {
+      d.style.width = '60px';
+    });
+  }
+  
+})();
+</script>
+
 </body>
 </html>
