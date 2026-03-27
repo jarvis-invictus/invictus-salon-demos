@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sage & Botanicals Hair Studio — Organic Beauty, Aundh Pune</title>
+    <meta name="description" content="Organic, boho-inspired hair salon in Aundh, Pune. Plant-based treatments, natural styling, sustainable beauty. Book your natural transformation today.">
+    <meta name="keywords" content="organic hair salon pune, boho salon, natural hair treatments, plant-based hair color, aundh pune salon, sustainable beauty">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Sage & Botanicals — Organic Hair Studio, Aundh Pune">
+    <meta property="og:description" content="Boho-inspired salon with plant-based treatments, natural styling, and sustainable practices. Sage & Botanicals celebrates your natural beauty.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://invictus-salon-demos.vercel.app/salon-v2-boho.html">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1595328055557-f7ff46714a0e?w=1200&h=630&fit=crop">
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://invictus-salon-demos.vercel.app/salon-v2-boho.html">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BeautySalon",
+        "name": "Sage & Botanicals Hair Studio",
+        "description": "Organic, boho-inspired hair salon with plant-based treatments and sustainable practices",
+        "url": "https://invictus-salon-demos.vercel.app/salon-v2-boho.html",
+        "telephone": "+91-9876543210",
+        "email": "hello@sageandbot anicals.in",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Aundh",
+            "addressRegion": "Pune",
+            "postalCode": "411007",
+            "addressCountry": "IN"
+        },
+        "image": "https://images.unsplash.com/photo-1595328055557-f7ff46714a0e?w=1200&h=630&fit=crop",
+        "sameAs": [
+            "https://instagram.com",
+            "https://facebook.com"
+        ],
+        "priceRange": "₹2000-₹8000",
+        "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+            "opens": "10:00",
+            "closes": "19:00"
+        }
+    }
+    </script>
+    
+    <style>
+        :root {
+            --sage: #7A9B6F;
+            --sage-light: #A8C89E;
+            --sage-dark: #556B53;
+            --terracotta: #C97860;
+            --terracotta-light: #E8B4A3;
+            --cream: #F5F1ED;
+            --warm-brown: #6B5347;
+            --text-dark: #3D3833;
+            --text-light: #7D7571;
+            --white: #FFFFFF;
+            --gold: #B8956A;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: var(--cream);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(255, 241, 237, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(122, 155, 111, 0.1);
+            padding: 0 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--sage);
+            letter-spacing: -0.5px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo-emoji {
+            font-size: 1.5rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-size: 0.95rem;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--sage);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            background: linear-gradient(135deg, var(--sage) 0%, var(--sage-light) 100%);
+            color: var(--white) !important;
+            padding: 10px 28px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 15px rgba(122, 155, 111, 0.2);
+        }
+
+        .nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(122, 155, 111, 0.3);
+        }
+
+        /* Mobile nav toggle */
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--sage);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            .nav-toggle {
+                display: block;
+            }
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 5%;
+            padding-top: 70px;
+            background: linear-gradient(135deg, rgba(122, 155, 111, 0.05) 0%, rgba(201, 120, 96, 0.05) 100%),
+                        url('https://images.unsplash.com/photo-1595328055557-f7ff46714a0e?w=1920&q=80') center/cover no-repeat;
+            background-attachment: fixed;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(255, 241, 237, 0.1) 0%, rgba(61, 56, 51, 0.3) 100%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            max-width: 700px;
+            animation: fadeInUp 1s ease 0.2s forwards;
+            opacity: 0;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-eyebrow {
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--sage);
+            margin-bottom: 1rem;
+            opacity: 0;
+            animation: fadeInUp 1s ease 0.4s forwards;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+            text-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            animation: fadeInUp 1s ease 0.6s forwards;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            margin-bottom: 2.5rem;
+            line-height: 1.8;
+            opacity: 0;
+            animation: fadeInUp 1s ease 0.8s forwards;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            opacity: 0;
+            animation: fadeInUp 1s ease 1s forwards;
+        }
+
+        .btn {
+            padding: 14px 40px;
+            border-radius: 50px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--sage) 0%, var(--sage-light) 100%);
+            color: var(--white);
+            box-shadow: 0 6px 20px rgba(122, 155, 111, 0.2);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 28px rgba(122, 155, 111, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--text-dark);
+            border: 2px solid var(--text-dark);
+        }
+
+        .btn-secondary:hover {
+            background: var(--text-dark);
+            color: var(--white);
+            transform: translateY(-3px);
+        }
+
+        /* Services Section */
+        .services {
+            padding: 120px 5%;
+            background: var(--white);
+            position: relative;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 5rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .section-eyebrow {
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--sage);
+            margin-bottom: 0.5rem;
+        }
+
+        .section-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--text-dark);
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .section-header p {
+            color: var(--text-light);
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .service-card {
+            background: var(--cream);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            border: 1px solid rgba(122, 155, 111, 0.1);
+            opacity: 0;
+            animation: slideIn 0.6s ease forwards;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .service-card:nth-child(1) { animation-delay: 0.1s; }
+        .service-card:nth-child(2) { animation-delay: 0.2s; }
+        .service-card:nth-child(3) { animation-delay: 0.3s; }
+        .service-card:nth-child(4) { animation-delay: 0.4s; }
+        .service-card:nth-child(5) { animation-delay: 0.5s; }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 40px rgba(122, 155, 111, 0.15);
+            border-color: var(--sage);
+        }
+
+        .service-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .service-card:hover .service-image {
+            transform: scale(1.05);
+        }
+
+        .service-content {
+            padding: 2rem;
+        }
+
+        .service-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-content h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: var(--text-dark);
+            margin-bottom: 0.8rem;
+        }
+
+        .service-content p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .service-price {
+            color: var(--sage);
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        /* Team Section */
+        .team {
+            padding: 120px 5%;
+            background: linear-gradient(135deg, rgba(122, 155, 111, 0.05) 0%, rgba(201, 120, 96, 0.05) 100%);
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            margin-top: 4rem;
+        }
+
+        .team-card {
+            text-align: center;
+            opacity: 0;
+            animation: slideIn 0.6s ease forwards;
+        }
+
+        .team-card:nth-child(1) { animation-delay: 0.1s; }
+        .team-card:nth-child(2) { animation-delay: 0.2s; }
+        .team-card:nth-child(3) { animation-delay: 0.3s; }
+
+        .team-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 1.5rem;
+            border: 4px solid var(--sage);
+            transition: transform 0.4s ease;
+        }
+
+        .team-card:hover .team-image {
+            transform: scale(1.05);
+        }
+
+        .team-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: var(--text-dark);
+            margin-bottom: 0.4rem;
+        }
+
+        .team-role {
+            color: var(--sage);
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        .team-card p {
+            color: var(--text-light);
+            line-height: 1.7;
+            font-size: 0.95rem;
+        }
+
+        /* Ingredients Section */
+        .ingredients {
+            padding: 120px 5%;
+            background: var(--white);
+        }
+
+        .ingredients-content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .ingredients-intro {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            margin-bottom: 5rem;
+        }
+
+        .ingredients-text h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            color: var(--text-dark);
+            margin-bottom: 1.5rem;
+        }
+
+        .ingredients-text p {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .ingredients-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .ingredients-list li {
+            display: flex;
+            gap: 0.8rem;
+            align-items: center;
+            color: var(--text-dark);
+            font-weight: 500;
+        }
+
+        .ingredients-list li::before {
+            content: '🌿';
+            font-size: 1.2rem;
+        }
+
+        .ingredients-image {
+            width: 100%;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .ingredients-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .ingredients-image:hover img {
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            .ingredients-intro {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            padding: 120px 5%;
+            background: linear-gradient(135deg, rgba(122, 155, 111, 0.05) 0%, rgba(201, 120, 96, 0.05) 100%);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            margin-top: 4rem;
+        }
+
+        .testimonial-card {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 12px;
+            border-left: 4px solid var(--sage);
+            opacity: 0;
+            animation: slideIn 0.6s ease forwards;
+        }
+
+        .testimonial-card:nth-child(1) { animation-delay: 0.1s; }
+        .testimonial-card:nth-child(2) { animation-delay: 0.2s; }
+        .testimonial-card:nth-child(3) { animation-delay: 0.3s; }
+
+        .testimonial-stars {
+            color: var(--gold);
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            letter-spacing: 2px;
+        }
+
+        .testimonial-text {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--text-dark);
+            font-size: 0.95rem;
+        }
+
+        .testimonial-role {
+            color: var(--sage);
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        /* Booking Section */
+        .booking {
+            padding: 120px 5%;
+            background: var(--white);
+        }
+
+        .booking-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .booking-form {
+            background: var(--cream);
+            padding: 3rem;
+            border-radius: 12px;
+            border: 1px solid rgba(122, 155, 111, 0.15);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid rgba(122, 155, 111, 0.2);
+            border-radius: 8px;
+            font-family: 'Lato', sans-serif;
+            font-size: 0.95rem;
+            color: var(--text-dark);
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--sage);
+            box-shadow: 0 0 0 3px rgba(122, 155, 111, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .form-submit {
+            width: 100%;
+            background: linear-gradient(135deg, var(--sage) 0%, var(--sage-light) 100%);
+            color: var(--white);
+            padding: 14px 28px;
+            border: none;
+            border-radius: 50px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(122, 155, 111, 0.2);
+        }
+
+        .form-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(122, 155, 111, 0.3);
+        }
+
+        .form-submit:active {
+            transform: translateY(0);
+        }
+
+        /* Floating CTA */
+        .floating-cta {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 100;
+            animation: bounce 2s ease-in-out infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .floating-cta:hover {
+            animation: none;
+        }
+
+        .floating-btn {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            background: linear-gradient(135deg, var(--sage) 0%, var(--sage-light) 100%);
+            color: var(--white);
+            padding: 12px 24px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            box-shadow: 0 6px 25px rgba(122, 155, 111, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .floating-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 35px rgba(122, 155, 111, 0.4);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--text-dark);
+            color: var(--cream);
+            padding: 4rem 5%;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 0.5rem 0;
+            font-size: 0.95rem;
+            opacity: 0.85;
+        }
+
+        footer .footer-links {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        footer a {
+            color: var(--cream);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: var(--sage-light);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav {
+                padding: 0 3%;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            .section-header h2 {
+                font-size: 1.8rem;
+            }
+
+            .services,
+            .team,
+            .ingredients,
+            .testimonials,
+            .booking {
+                padding: 80px 3%;
+            }
+
+            .ingredients-text h2 {
+                font-size: 1.6rem;
+            }
+
+            .booking-form {
+                padding: 2rem;
+            }
+
+            .floating-cta {
+                bottom: 1rem;
+                right: 1rem;
+            }
+
+            .floating-btn {
+                padding: 10px 16px;
+                font-size: 0.8rem;
+            }
+        }
+
+        /* Prefers reduced motion */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">
+            <span class="logo-emoji">🌿</span>
+            <span>Sage & Botanicals</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#services">Services</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="#ingredients">Ingredients</a></li>
+            <li><a href="#testimonials">Reviews</a></li>
+        </ul>
+        <a href="#booking" class="nav-cta">Book Now</a>
+        <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-eyebrow">Organic Hair Studio • Aundh, Pune</div>
+            <h1>Your Natural Beauty Deserves Natural Care</h1>
+            <p>Plant-based treatments, sustainable practices, and stylists who celebrate your unique hair journey. Welcome to the boho revolution.</p>
+            <div class="hero-buttons">
+                <a href="#booking" class="btn btn-primary">Book Your Consultation</a>
+                <a href="#services" class="btn btn-secondary">Explore Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="section-header">
+            <div class="section-eyebrow">What We Offer</div>
+            <h2>Services Rooted in Nature</h2>
+            <p>Each service begins with a personal consultation and celebrates your natural beauty through plant-based treatments.</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=600&q=80" alt="Natural Hair Cut" class="service-image">
+                <div class="service-content">
+                    <div class="service-icon">✂️</div>
+                    <h3>Natural Cuts</h3>
+                    <p>Precision cuts that honor your hair's natural texture and movement. From bobs to layers, always personalized.</p>
+                    <div class="service-price">Starting ₹3,000</div>
+                </div>
+            </div>
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?w=600&q=80" alt="Plant-Based Coloring" class="service-image">
+                <div class="service-content">
+                    <div class="service-icon">🎨</div>
+                    <h3>Plant-Based Color</h3>
+                    <p>Botanical dyes, henna, and ammonia-free colors. Transform your look without compromising hair health.</p>
+                    <div class="service-price">Starting ₹4,500</div>
+                </div>
+            </div>
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=600&q=80" alt="Bridal Styling" class="service-image">
+                <div class="service-content">
+                    <div class="service-icon">👑</div>
+                    <h3>Boho Bridal</h3>
+                    <p>Romantic, flowing styles for your special day. Loose waves, flower crowns, and timeless boho elegance.</p>
+                    <div class="service-price">Starting ₹7,500</div>
+                </div>
+            </div>
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=600&q=80" alt="Scalp Treatment" class="service-image">
+                <div class="service-content">
+                    <div class="service-icon">🌱</div>
+                    <h3>Scalp Wellness</h3>
+                    <p>Detoxifying treatments with organic oils, herbs, and natural remedies. Heal, nourish, revive.</p>
+                    <div class="service-price">Starting ₹2,500</div>
+                </div>
+            </div>
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1540575467063-178f50002c4b?w=600&q=80" alt="Extensions" class="service-image">
+                <div class="service-content">
+                    <div class="service-icon">✨</div>
+                    <h3>Natural Extensions</h3>
+                    <p>Ethical, human-hair extensions that blend seamlessly. Volume without compromise.</p>
+                    <div class="service-price">Starting ₹6,000</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team" id="team">
+        <div class="section-header">
+            <div class="section-eyebrow">Meet Our Artists</div>
+            <h2>Stylists Who Care</h2>
+            <p>Each stylist on our team is trained in organic practices and brings years of experience in sustainable beauty.</p>
+        </div>
+        <div class="team-grid">
+            <div class="team-card">
+                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300&q=80" alt="Priya Nair" class="team-image">
+                <h3>Priya Nair</h3>
+                <div class="team-role">Color Specialist</div>
+                <p>Priya's passion is botanical color. With 8 years in organic salons, she transforms hair using henna, indigo, and plant-based dyes.</p>
+            </div>
+            <div class="team-card">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&q=80" alt="Rohan Sharma" class="team-image">
+                <h3>Rohan Sharma</h3>
+                <div class="team-role">Master Stylist</div>
+                <p>Rohan specializes in cuts and texture. He believes every hair type has its own beauty — his job is to reveal it.</p>
+            </div>
+            <div class="team-card">
+                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&q=80" alt="Maya Desai" class="team-image">
+                <h3>Maya Desai</h3>
+                <div class="team-role">Wellness Coach</div>
+                <p>Maya combines hair care with holistic wellness. She creates personalized rituals that nurture both hair and soul.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ingredients Section -->
+    <section class="ingredients" id="ingredients">
+        <div class="ingredients-content">
+            <div class="section-header" style="margin-bottom: 3rem;">
+                <div class="section-eyebrow">Natural Ingredients</div>
+                <h2>What We Use</h2>
+                <p>Pure, organic, ethically sourced ingredients that nourish hair without harsh chemicals.</p>
+            </div>
+            <div class="ingredients-intro">
+                <div class="ingredients-text">
+                    <h2>Certified Organic Beauty</h2>
+                    <p>Every product we use is carefully selected from trusted organic suppliers. No sulfates, parabens, silicones, or synthetic fragrances.</p>
+                    <ul class="ingredients-list">
+                        <li>Cold-pressed coconut oil</li>
+                        <li>Pure henna powder</li>
+                        <li>Organic argan oil</li>
+                        <li>Herbal indigo</li>
+                        <li>Aloe vera gel</li>
+                        <li>Rose water</li>
+                        <li>Sesame oil</li>
+                        <li>Neem extracts</li>
+                    </ul>
+                </div>
+                <div class="ingredients-image">
+                    <img src="https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?w=600&q=80" alt="Organic ingredients">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="section-header">
+            <div class="section-eyebrow">Guest Stories</div>
+            <h2>What Our Guests Say</h2>
+            <p>Real transformations from real people who chose natural beauty.</p>
+        </div>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+                <div class="testimonial-text">"Finally found a salon that celebrates my natural hair! The team at Sage & Botanicals is incredibly knowledgeable and genuinely cares."</div>
+                <div class="testimonial-author">Anjali Gupta</div>
+                <div class="testimonial-role">Artist & Content Creator</div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+                <div class="testimonial-text">"The plant-based color is amazing. My hair has never felt healthier. Plus, the vibe of the salon is so calming and authentic."</div>
+                <div class="testimonial-author">Sneha Deshpande</div>
+                <div class="testimonial-role">Yoga Instructor</div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+                <div class="testimonial-text">"My bridal look was exactly what I dreamed of — romantic, natural, and it lasted all night. Rohan and the team are true artists."</div>
+                <div class="testimonial-author">Neha Patel</div>
+                <div class="testimonial-role">Wedding Bride</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section class="booking" id="booking">
+        <div class="section-header">
+            <div class="section-eyebrow">Get Started</div>
+            <h2>Book Your Consultation</h2>
+            <p>Ready for your natural transformation? Fill out the form below and we'll be in touch within 24 hours.</p>
+        </div>
+        <div class="booking-container">
+            <form class="booking-form" id="bookingForm">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" required placeholder="Priya Sharma">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required placeholder="+91 98765 43210">
+                </div>
+                <div class="form-group">
+                    <label for="service">Service Interested In</label>
+                    <select id="service" name="service" required>
+                        <option value="">Select a service</option>
+                        <option value="Natural Cuts">Natural Cuts</option>
+                        <option value="Plant-Based Color">Plant-Based Color</option>
+                        <option value="Boho Bridal">Boho Bridal</option>
+                        <option value="Scalp Wellness">Scalp Wellness</option>
+                        <option value="Natural Extensions">Natural Extensions</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="date">Preferred Date</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Tell us about your hair journey..."></textarea>
+                </div>
+                <button type="submit" class="form-submit">Book Consultation</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Floating CTA -->
+    <div class="floating-cta">
+        <a href="https://wa.me/919876543210?text=Hi%20Sage%20%26%20Botanicals%2C%20I%20would%20like%20to%20book%20a%20consultation." target="_blank" class="floating-btn">
+            📱 WhatsApp
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p><strong>Sage & Botanicals Hair Studio</strong></p>
+        <p>Aundh, Pune • Maharashtra 411007 • India</p>
+        <p>📞 +91-9876543210 • 📧 hello@sageandbot anicals.in</p>
+        <p>⏰ Mon-Sat: 10 AM - 7 PM • Sun: 11 AM - 5 PM</p>
+        <div class="footer-links">
+            <a href="https://instagram.com" target="_blank">Instagram</a>
+            <a href="https://facebook.com" target="_blank">Facebook</a>
+            <a href="https://pinterest.com" target="_blank">Pinterest</a>
+        </div>
+        <p style="margin-top: 2rem; font-size: 0.85rem; opacity: 0.7;">© 2026 Sage & Botanicals. All rights reserved. Celebrating natural beauty, organically.</p>
+    </footer>
+
+    <!-- Form Handler -->
+    <script>
+        document.getElementById('bookingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const service = document.getElementById('service').value;
+            const date = document.getElementById('date').value;
+            const message = document.getElementById('message').value;
+            
+            const whatsappMessage = `Hi Sage & Botanicals! I'd like to book a consultation.\n\nName: ${name}\nPhone: ${phone}\nService: ${service}\nDate: ${date}\n\nMessage: ${message}`;
+            
+            window.open(`https://wa.me/919876543210?text=${encodeURIComponent(whatsappMessage)}`, '_blank');
+            
+            this.reset();
+        });
+    </script>
+</body>
+</html>
